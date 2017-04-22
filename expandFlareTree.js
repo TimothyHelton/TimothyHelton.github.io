@@ -26,7 +26,7 @@ function collapseAll() {
     update(root);
 }
 
-var margin = {top: 20, right: 120, bottom: 20, left: 120},
+var margin = {top: 20, right: 120, bottom: 20, left: 150},
     width = 960 - margin.right - margin.left,
     height = 600 - margin.top - margin.bottom;
 
@@ -68,7 +68,7 @@ function update(source) {
     // Normalize for fixed-depth.
     nodes.forEach(function(d) { d.y = d.depth * 180; });
 
-    // Update the nodes…
+    // Update the nodes
     var node = svg.selectAll("g.node")
         .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
@@ -82,13 +82,13 @@ function update(source) {
     nodeEnter.append("circle")
         .attr("r", 1e-6)
         .style("fill", function(d) {
-            if(d.type === "database") return "palegreen";
-            if(d.type === "documentation") return "salmon";
-            if(d.type === "project") return "wheat";
-            if(d.type === "python") return "skyblue";
-            if(d.type === "root") return "black";
-            if(d.type === "visualize") return "plum";
-            if(d.type === "web_scrape") return "yellow";
+            if(d.type === "database") return "#787f51";
+            if(d.type === "documentation") return "#824937";
+            if(d.type === "project") return "#000000";
+            if(d.type === "python") return "#cd5b1b";
+            if(d.type === "root") return "#314d26";
+            if(d.type === "visualize") return "#c19408";
+            if(d.type === "web_scrape") return "#c8bd92";
         });
 
     nodeEnter.append("text")
@@ -106,15 +106,15 @@ function update(source) {
             return "translate(" + d.y + "," + d.x + ")"; });
 
     nodeUpdate.select("circle")
-        .attr("r", 4.5)
+        .attr("r", 6)
         .style("fill", function(d) {
-            if(d.type === "database") return "palegreen";
-            if(d.type === "documentation") return "salmon";
-            if(d.type === "project") return "wheat";
-            if(d.type === "python") return "skyblue";
-            if(d.type === "root") return "black";
-            if(d.type === "visualize") return "plum";
-            if(d.type === "web_scrape") return "yellow";
+            if(d.type === "database") return "#787f51";
+            if(d.type === "documentation") return "#824937";
+            if(d.type === "project") return "#000000";
+            if(d.type === "python") return "#cd5b1b";
+            if(d.type === "root") return "#314d26";
+            if(d.type === "visualize") return "#c19408";
+            if(d.type === "web_scrape") return "#c8bd92";
         });
 
     nodeUpdate.select("text")
