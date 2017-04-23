@@ -8,37 +8,75 @@
       "children": [
         {
           "name": "Requests",
-          "type": "web_scrape"
+          "type": "web_scrapping",
+          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         },
         {
           "name": "NumPy",
-          "type": "python"
+          "type": "python",
+          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         },
         {
           "name": "Pandas",
-          "type": "python"
+          "type": "python",
+          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         },
         {
           "name": "Jupyter Notebook",
-          "type": "python"
+          "type": "python",
+          "url": "https://github.com/TimothyHelton/k2datascience/blob/master/notebooks/EDA_MTA_Exercises.ipynb"
         },
         {
           "name": "Matplotlib",
-          "type": "visualize"
+          "type": "visualization",
+          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         },
         {
           "name": "Sphinx",
-          "type": "documentation"
+          "type": "documentation",
+          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         }
       ]
     },
     {
-      "name": "Next Project",
+      "name": "Strumenti",
+      "type": "project",
+      "children": [
+        {
+          "name": "Python",
+          "type": "python",
+          "url": "https://github.com/TimothyHelton/strumenti"
+        },
+        {
+          "name": "Sphinx",
+          "type": "documentation",
+          "url": "https://github.com/TimothyHelton/strumenti/tree/devel/docs"
+        }
+      ]
+    },
+    {
+      "name": "Project",
       "type": "project",
       "children": [
         {
           "name": "Web Scrapping",
-          "type": "web_scrape"
+          "type": "web_scrapping"
+        },
+        {
+          "name": "Database",
+          "type": "database"
+        },
+        {
+          "name": "Python",
+          "type": "python"
+        },
+        {
+          "name": "Visualization",
+          "type": "visualization"
+        },
+        {
+          "name": "Documentation",
+          "type": "documentation"
         }
       ]
     }

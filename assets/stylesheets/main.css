@@ -100,7 +100,7 @@ Rows
 =========================
 */
 
-..row,
+.row,
 .row-alt {
     min-width: 100%;
 }
@@ -123,6 +123,12 @@ Rows
 Typography
 =========================
 */
+
+.about-headings h3{
+    font-size: 21px;
+    margin-top: 22px;
+    margin-bottom: 0px;
+}
 
 h1, h3, h4, h5, p {
     margin-bottom: 22px;
@@ -170,6 +176,12 @@ cite, em {
 .container {
     padding-left: 30px;
     padding-right: 30px;
+}
+
+span b {
+    float: right;
+    font-size: 80%;
+    padding-right: 70%;
 }
 
 /*
@@ -268,17 +280,22 @@ Columns
 }
 
 .col-1-2 {
-    width: 50%;
+    width: 49.9%;
 }
 
 .col-2-3 {
-    width:66.66%;
+    width: 66.66%;
+}
+
+.col-3-4 {
+    width: 74.9%;
 }
 
 .col-1-4,
 .col-1-3,
 .col-1-2,
-.col-2-3 {
+.col-2-3,
+.col-3-4 {
     display: inline-block;
     vertical-align: top;
 }
@@ -287,7 +304,8 @@ Columns
 .col-1-4,
 .col-1-3,
 .col-1-2,
-.col-2-3 {
+.col-2-3,
+.col-3-4 {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -312,7 +330,7 @@ Nodes
 .node circle {
     fill: #fff;
     stroke: black;
-    stroke-width: 1px;
+    stroke-width: 1e-6;
 }
 
 .node text {
@@ -321,7 +339,8 @@ Nodes
 
 .link {
     fill: none;
-    stroke: #ccc;
+    opacity: 0.3;
+    stroke: #fff;
     stroke-width: 1px;
 }
 
@@ -344,47 +363,47 @@ Legend
 ++++++++++
 */
 
-.legend_box {
+.legend-box {
     border: 1px solid #6b7243;
     margin-top: 5mm;
     width: 12ch;
 }
 
-.legend_title {
+.legend-title {
     font: 14px sans-serif;
     text-align: center;
 }
 
-.legend_text {
+.legend-text {
     margin-left: 3mm;
     vertical-align: middle;
 }
 
-.legend_database {
+.legend-database {
 background: #787f51;
 }
 
-.legend_documentation {
+.legend-documentation {
     background: #824937;
 }
 
-.legend_python{
+.legend-python{
 background: #cd5b1b;
 }
 
-.legend_visualization {
+.legend-visualization {
 background: #c19408;
 }
 
-.legend_web-scraping{
+.legend-web-scraping{
     background: #c8bd92;
 }
 
-.legend_database,
-.legend_documentation,
-.legend_python,
-.legend_visualization,
-.legend_web-scraping {
+.legend-database,
+.legend-documentation,
+.legend-python,
+.legend-visualization,
+.legend-web-scraping {
     float: left;
     height: 12px;
     margin: 0px;
@@ -397,7 +416,7 @@ background: #c19408;
 Legend Lines
 ++++++++++
 */
-.line_no_space {
+.line-no-space {
     border-color: #6b7243;
     margin: 0px;
     padding: 0px;
@@ -443,10 +462,15 @@ Home
 Images
 =========================
  */
+
+.about-img {
+    border-radius: 50%;
+    height: 130px;
+}
+
 .avatar img {
     border-radius: 15% 50%;
     display: block;
-    height: 220px;
     margin: auto;
 }
 
@@ -469,6 +493,22 @@ p a {
     border-bottom: 1px solid #dfe2e5;
 }
 
+/*
+=============================
+Lists
+=============================
+*/
+
+ul {
+    font: 14px sans-serif;
+    list-style-type: disc;
+    padding: 3px 0px 3px 30px;
+}
+
+.ul-nest {
+    font: 12px sans-serif;
+    list-style-type: square;
+}
 
 /*
 =============================

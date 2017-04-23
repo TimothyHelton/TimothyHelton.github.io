@@ -1,3 +1,11 @@
+function collapse(d) {
+    if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+    }
+}
+
 function expand(d) {
     var children = (d.children)?d.children:d._children;
     if (d._children) {
@@ -8,12 +16,9 @@ function expand(d) {
         children.forEach(expand);
 }
 
-function collapse(d) {
-    if (d.children) {
-        d._children = d.children;
-        d._children.forEach(collapse);
-        d.children = null;
-    }
+function collapseAll() {
+    root.children.forEach(collapse);
+    update(root);
 }
 
 function expandAll() {
@@ -21,12 +26,30 @@ function expandAll() {
     update(root);
 }
 
-function collapseAll() {
-    root.children.forEach(collapse);
-    update(root);
+// Set colors based on file type
+function fileColors(d) {
+    if(d.type === "database") return "#787f51";
+    if(d.type === "documentation") return "#824937";
+    if(d.type === "project") return "#000000";
+    if(d.type === "python") return "#cd5b1b";
+    if(d.type === "root") return "#314d26";
+    if(d.type === "visualization") return "#c19408";
+    if(d.type === "web_scrapping") return "#c8bd92";
 }
 
-var margin = {top: 20, right: 120, bottom: 20, left: 150},
+// Toggle children on click.
+function click(d) {
+    if (d.children) {
+        d._children = d.children;
+        d.children = null;
+    } else {
+        d.children = d._children;
+        d._children = null;
+    }
+    update(d);
+}
+
+var margin = {top: 20, right: 120, bottom: 20, left: 175},
     width = 960 - margin.right - margin.left,
     height = 600 - margin.top - margin.bottom;
 
@@ -79,25 +102,30 @@ function update(source) {
             return "translate(" + source.y0 + "," + source.x0 + ")"; })
         .on("click", click);
 
+    // Color Nodes
     nodeEnter.append("circle")
         .attr("r", 1e-6)
-        .style("fill", function(d) {
-            if(d.type === "database") return "#787f51";
-            if(d.type === "documentation") return "#824937";
-            if(d.type === "project") return "#000000";
-            if(d.type === "python") return "#cd5b1b";
-            if(d.type === "root") return "#314d26";
-            if(d.type === "visualize") return "#c19408";
-            if(d.type === "web_scrape") return "#c8bd92";
+        .style("stroke", function (d) {
+            return fileColors(d)
+        })
+        .style("fill", function (d) {
+            return fileColors(d)
         });
 
     nodeEnter.append("text")
-        .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+        .attr("x", function(d) {
+            return d.children || d._children ? -10 : 10; })
         .attr("dy", ".35em")
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start"; })
         .text(function(d) { return d.name; })
         .style("fill-opacity", 1e-6);
+
+    // Add link if url exists in JSON
+    // nodeEnter.append("a")
+    //     .attr("xlink:href", function (d) {
+    //         return d.url;
+    //     });
 
     // Transition nodes to their new position.
     var nodeUpdate = node.transition()
@@ -107,14 +135,11 @@ function update(source) {
 
     nodeUpdate.select("circle")
         .attr("r", 6)
+        .style("stroke", function (d) {
+            return fileColors(d);
+        })
         .style("fill", function(d) {
-            if(d.type === "database") return "#787f51";
-            if(d.type === "documentation") return "#824937";
-            if(d.type === "project") return "#000000";
-            if(d.type === "python") return "#cd5b1b";
-            if(d.type === "root") return "#314d26";
-            if(d.type === "visualize") return "#c19408";
-            if(d.type === "web_scrape") return "#c8bd92";
+            return fileColors(d);
         });
 
     nodeUpdate.select("text")
@@ -164,16 +189,4 @@ function update(source) {
         d.x0 = d.x;
         d.y0 = d.y;
     });
-}
-
-// Toggle children on click.
-function click(d) {
-    if (d.children) {
-        d._children = d.children;
-        d.children = null;
-    } else {
-        d.children = d._children;
-        d._children = null;
-    }
-    update(d);
 }
