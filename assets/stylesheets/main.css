@@ -160,6 +160,10 @@ h5 {
     text-transform: uppercase;
 }
 
+.leading-paragraph {
+    margin-top: 6px;
+}
+
 strong {
     font-weight: 400;
 }
@@ -468,9 +472,21 @@ Images
     height: 130px;
 }
 
+.about-blog-img {
+    display: block;
+    height: 350px;
+    margin: auto;
+}
+
 .avatar img {
     border-radius: 15% 50%;
     display: block;
+    margin: auto;
+}
+
+.thesis-img {
+    display: block;
+    height: 150px;
     margin: auto;
 }
 
