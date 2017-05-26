@@ -595,3 +595,44 @@ Primary Header
 .primary-footer a:hover {
     color: #6b7243;
 }
+
+/*
+=============================
+Tables
+=============================
+*/
+
+.table_title{
+    text-align: center;
+}
+
+table {
+    margin-bottom: 44px;
+    width: 95%;
+}
+
+td {
+    padding-bottom: 44px;
+    padding-left: 10px;
+}
+
+th {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    width: 12%;
+}
+
+td h5 {
+    border-bottom: 1px;
+    border-style: solid;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: -10px;
+    margin-top: -20px;
+    padding-right: 10px;
+}
+
+td h6 {
+    font-weight: 400;
+}
