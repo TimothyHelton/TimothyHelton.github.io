@@ -602,37 +602,45 @@ Tables
 =============================
 */
 
-.table_title{
-    text-align: center;
+.schema {
+    padding-left: 15px;
 }
 
-table {
+.schema table {
     margin-bottom: 44px;
     width: 95%;
 }
 
-td {
-    padding-bottom: 44px;
-    padding-left: 10px;
+.schema td:nth-child(even) {
+    background-color: #f0f2f0;
 }
 
-th {
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: left;
-    width: 12%;
-}
-
-td h5 {
-    border-bottom: 1px;
-    border-style: solid;
+.schema td h5 {
+    background: -webkit-linear-gradient(to right, #314d26, #6b7243);
+    background:    -moz-linear-gradient(to right, #314d26, #6b7243);
+    background:         linear-gradient(to right, #314d26, #6b7243);
+    color: #fff;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-right: -10px;
     margin-top: -20px;
+    padding-left: 10px;
     padding-right: 10px;
 }
 
-td h6 {
+.schema td h6 {
     font-weight: 400;
+}
+
+.schema th {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.schema-top {
+    padding-top: -44px;
+}
+
+.schema-middle {
+    padding-top: 44px;
 }
