@@ -133,22 +133,27 @@ function update(source) {
         .style("fill-opacity", 1e-6);
 
     // Add link if url exists in JSON
-    nodeEnter.append("a")
-        // .attr("click", function(d) {
-        //     window.location = d.url;
-        // });
-        .attr("xlink:href", function (d) {
-            return d.url;
-        });
+    try {
+        var nodeShape = nodeEnter.node().getBBox();
+        // console.log("nodeShape", nodeShape);
 
-    // nodeEnter.append("rect")
-    //     .attr("y", -barHeight / 2)
-    //     .attr("height", barHeight)
-    //     .attr("width", barWidth)
-    //     .style("fill", color)
-    //     .on("click", function (d) {
-    //         window.location = d.url;
-    //     });
+        nodeEnter.append("svg")
+            .attr(height = nodeShape.height)
+            .attr(width = nodeShape.width);
+
+        nodeEnter.append("a")
+            .attr("xlink:href", function (d) {
+                return d.url;
+            })
+            .append("rect")
+            .attr("x", -10)
+            .attr("y", -nodeShape.height / 2)
+            .attr("height", nodeShape.height)
+            .attr("width", nodeShape.width + 10)
+            .style("fill-opacity", 1e-6);
+    } catch (e) {
+        // catch TypeError during tree collapse
+    }
 
     // Transition nodes to their new position.
     var nodeUpdate = node.transition()
