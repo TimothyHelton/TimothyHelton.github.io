@@ -61,7 +61,9 @@ var tree = d3.layout.tree()
     .size([height, width]);
 
 var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.y, d.x]; });
+    .projection(function(d) {
+        return [d.y, d.x];
+    });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.right + margin.left)
@@ -89,17 +91,22 @@ function update(source) {
         links = tree.links(nodes);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d) { d.y = d.depth * 180; });
+    nodes.forEach(function(d) {
+        d.y = d.depth * 180;
+    });
 
     // Update the nodes
     var node = svg.selectAll("g.node")
-        .data(nodes, function(d) { return d.id || (d.id = ++i); });
+        .data(nodes, function(d) {
+            return d.id || (d.id = ++i);
+        });
 
     // Enter any new nodes at the parent's previous position.
     var nodeEnter = node.enter().append("g")
         .attr("class", "node")
         .attr("transform", function(d) {
-            return "translate(" + source.y0 + "," + source.x0 + ")"; })
+            return "translate(" + source.y0 + "," + source.x0 + ")";
+        })
         .on("click", click);
 
     // Color Nodes
@@ -114,11 +121,15 @@ function update(source) {
 
     nodeEnter.append("text")
         .attr("x", function(d) {
-            return d.children || d._children ? -10 : 10; })
+            return d.children || d._children ? -10 : 10;
+        })
         .attr("dy", ".35em")
         .attr("text-anchor", function(d) {
-            return d.children || d._children ? "end" : "start"; })
-        .text(function(d) { return d.name; })
+            return d.children || d._children ? "end" : "start";
+        })
+        .text(function(d) {
+            return d.name;
+        })
         .style("fill-opacity", 1e-6);
 
     // Add link if url exists in JSON
@@ -143,7 +154,8 @@ function update(source) {
     var nodeUpdate = node.transition()
         .duration(duration)
         .attr("transform", function(d) {
-            return "translate(" + d.y + "," + d.x + ")"; });
+            return "translate(" + d.y + "," + d.x + ")";
+        });
 
     nodeUpdate.select("circle")
         .attr("r", 6)
@@ -161,7 +173,8 @@ function update(source) {
     var nodeExit = node.exit().transition()
         .duration(duration)
         .attr("transform", function(d) {
-            return "translate(" + source.y + "," + source.x + ")"; })
+            return "translate(" + source.y + "," + source.x + ")";
+        })
         .remove();
 
     nodeExit.select("circle")
@@ -172,7 +185,9 @@ function update(source) {
 
     // Update the links…
     var link = svg.selectAll("path.link")
-        .data(links, function(d) { return d.target.id; });
+        .data(links, function(d) {
+            return d.target.id;
+        });
 
     // Enter any new links at the parent's previous position.
     link.enter().insert("path", "g")

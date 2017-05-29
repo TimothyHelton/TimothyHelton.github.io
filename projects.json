@@ -8,7 +8,7 @@
       "children": [
         {
           "name": "Requests",
-          "type": "web_scrapping",
+          "type": "web_scraping",
           "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
         },
         {
@@ -70,8 +70,8 @@
       "type": "project",
       "children": [
         {
-          "name": "Web Scrapping",
-          "type": "web_scrapping"
+          "name": "Web Scraping",
+          "type": "web_scraping"
         },
         {
           "name": "Database",
