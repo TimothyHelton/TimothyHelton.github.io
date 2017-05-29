@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Timothy Helton</title>
+
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Timothy Helton's Projects"/>
+
+        <link rel="stylesheet" type="text/css"
+              href="assets/stylesheets/main.css">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+
+        <header class="primary-header container group">
+
+            <h1 class="logo">
+                <a href="index.html">Timothy Helton</a>
+            </h1>
+
+            <h3 class="tagline">Learn Something New Every Day</h3>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Hero -->
+
+        <section class="row-alt">
+
+            <div class="hero container">
+
+                <h2>Pandas Best Practices</h2>
+
+                <img class="center-img"
+                     src="assets/images/python_pandas_logo.png"
+                     alt="Python Pandas Logo">
+
+            </div>
+
+        </section>
+
+         <!-- Teaser -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Backgroud</h2>
+
+                <p>
+                    I have been fortunate enough to attend two different training
+                    courses put on by
+                    <a href="https://www.enthought.com/">
+                    Enthought Scientific Computing Solutions
+                    </a>.
+                    The
+                    <a href="https://www.enthought.com/services/training/instructors/">
+                    instructors
+                    </a> were Michael McKerns and Alexandre Chabot-Leclerc who
+                    really had it together.
+                    The most recent class was
+                    <a href="https://www.enthought.com/services/training/pandas-mastery-workshop/">
+                    Pandas Mastery Workshop
+                    </a>, which I would highly recommend.
+                    During the course Alexandre made comments about performance
+                    numerous times, and I wanted to document some surprising methods
+                    to speed up
+                    <a href="http://pandas.pydata.org/">
+                    Pandas
+                    </a>.
+                </p>
+
+                <h2>Notebook</h2>
+
+                <p>
+                    The notebook with all the code to recreate this study is located
+                    <a href="https://github.com/TimothyHelton/algorithms/blob/master/notebooks/Execution_Time.ipynb">
+                    here
+                    </a>.
+                </p>
+
+                <h2>Versions</h2>
+
+                <p>
+                    The following versions of packages were used to measure
+                    the executions times.
+
+                    <ul>
+                        <li>Python: 3.6.1</li>
+                        <li>Numpy: 1.12.1</li>
+                        <li>Pandas: 0.20.1</li>
+                    </ul>
+
+                </p>
+
+                <p class="warning">
+                    NOTE:
+
+                    The timeit.autorange method was introduced in
+                    Python 3.6 and is used to automatically determine how many
+                    times to call timeit.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Series Numerical Operations -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Series Numerical Operations</h2>
+
+                <p>
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/series_addition_profile.png"
+                     alt="Series Addition Profile">
+
+                <img class="center-img"
+                     src="assets/images/series_multiplication_profile.png"
+                     alt="Series Multiplication Profile">
+
+            </div>
+
+        </section>
+
+        <!-- DataFrame Numerical Operations -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>DataFrame Numerical Operations</h2>
+
+                <p>
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/df_addition_cols_profile.png"
+                     alt="DataFrame Addition Columns Profile">
+
+                <p>
+
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/df_multiplication_cols_profile.png"
+                     alt="DataFrame Multiplication Columns Profile">
+
+                <p>
+
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/df_addition_rows_profile.png"
+                     alt="DataFrame Addition Rows Profile">
+
+                <p>
+
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/df_multiplication_rows_profile.png"
+                     alt="DataFrame Muliplication Rows Profile">
+
+            </div>
+
+        </section>
+
+        <!-- Aggregate -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Aggregate Methods</h2>
+
+                <p>
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/df_applymap_profile.png"
+                     alt="">
+
+            </div>
+
+        </section>
+
+        <!-- Date Formats -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Date String Formats</h2>
+
+                <p>
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/date_format_profile.png"
+                     alt="Date Format Profile">
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="primary-footer container group">
+
+            <small>&copy; Timothy Helton</small>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </footer>
+
+    </body>
+
+</html>

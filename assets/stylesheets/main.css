@@ -188,6 +188,11 @@ span b {
     padding-right: 70%;
 }
 
+.warning {
+    color: #ff0000;
+    font-weight: 400;
+}
+
 /*
 =============================
 Buttons
@@ -482,6 +487,12 @@ Images
     border-radius: 15% 50%;
     display: block;
     margin: auto;
+}
+
+.center-img {
+    display: block;
+    margin: auto;
+    padding-top: 22px;
 }
 
 .thesis-img {

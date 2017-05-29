@@ -55,6 +55,17 @@
       ]
     },
     {
+      "name": "Pandas Best Practices",
+      "type": "project",
+      "children": [
+        {
+          "name": "Python",
+          "type": "python",
+          "url": "pandas_best_practices.html"
+        }
+      ]
+    },
+    {
       "name": "Project",
       "type": "project",
       "children": [

@@ -122,9 +122,21 @@ function update(source) {
         .style("fill-opacity", 1e-6);
 
     // Add link if url exists in JSON
-    // nodeEnter.append("a")
-    //     .attr("xlink:href", function (d) {
-    //         return d.url;
+    nodeEnter.append("a")
+        // .attr("click", function(d) {
+        //     window.location = d.url;
+        // });
+        .attr("xlink:href", function (d) {
+            return d.url;
+        });
+
+    // nodeEnter.append("rect")
+    //     .attr("y", -barHeight / 2)
+    //     .attr("height", barHeight)
+    //     .attr("width", barWidth)
+    //     .style("fill", color)
+    //     .on("click", function (d) {
+    //         window.location = d.url;
     //     });
 
     // Transition nodes to their new position.
