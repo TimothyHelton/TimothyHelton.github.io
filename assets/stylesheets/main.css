@@ -130,6 +130,13 @@ Typography
     margin-bottom: 0px;
 }
 
+pre code {
+    background-color: #333333;
+    border: 1px solid #000000;
+    color: #ffffff;
+    display: block;
+}
+
 h1, h3, h4, h5, p {
     margin-bottom: 22px;
     color: #6b7243;
@@ -527,9 +534,17 @@ Lists
 */
 
 ul {
+    padding: 3px 0px 3px 30px;
+}
+
+.ul-middle {
+    padding: 3px 0px 30px 30px;
+}
+
+ul,
+.ul-middle {
     font: 14px sans-serif;
     list-style-type: disc;
-    padding: 3px 0px 3px 30px;
 }
 
 .ul-nest {

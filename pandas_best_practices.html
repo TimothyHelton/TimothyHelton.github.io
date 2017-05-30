@@ -64,6 +64,19 @@
 
             <div class="col-3-4">
 
+
+                <h2>
+                    "I think my code is well written, but this is taking
+                    <em>forever</em> to run!"
+                </h2>
+
+                <p>
+                    This article is going to display that sometimes
+                    processing speedups come in strange places.
+                    Hopefully, you will learn a trick or two and be able to
+                    write some better code on your project.
+                </p>
+
                 <h2>Backgroud</h2>
 
                 <p>
@@ -75,15 +88,15 @@
                     The
                     <a href="https://www.enthought.com/services/training/instructors/">
                     instructors
-                    </a> were Michael McKerns and Alexandre Chabot-Leclerc who
-                    really had it together.
+                    </a> were Mike McKerns and Alex Chabot-Leclerc who were
+                    highly knowledgeable professionals.
                     The most recent class was
                     <a href="https://www.enthought.com/services/training/pandas-mastery-workshop/">
                     Pandas Mastery Workshop
                     </a>, which I would highly recommend.
-                    During the course Alexandre made comments about performance
-                    numerous times, and I wanted to document some surprising methods
-                    to speed up
+                    During the course Alexandre made numerous comments about
+                    performance differences, and I wanted to document some
+                    surprising methods to speed up
                     <a href="http://pandas.pydata.org/">
                     Pandas
                     </a>.
@@ -92,7 +105,8 @@
                 <h2>Notebook</h2>
 
                 <p>
-                    The notebook with all the code to recreate this study is located
+                    The notebook with all the code to recreate this study is
+                    located
                     <a href="https://github.com/TimothyHelton/algorithms/blob/master/notebooks/Execution_Time.ipynb">
                     here
                     </a>.
@@ -103,22 +117,84 @@
                 <p>
                     The following versions of packages were used to measure
                     the executions times.
-
-                    <ul>
-                        <li>Python: 3.6.1</li>
-                        <li>Numpy: 1.12.1</li>
-                        <li>Pandas: 0.20.1</li>
-                    </ul>
-
                 </p>
+
+                <ul class="ul-middle">
+                    <li>Python: 3.6.1</li>
+                    <li>Numpy: 1.12.1</li>
+                    <li>Pandas: 0.20.1</li>
+                </ul>
 
                 <p class="warning">
                     NOTE:
 
-                    The timeit.autorange method was introduced in
-                    Python 3.6 and is used to automatically determine how many
-                    times to call timeit.
+                    The timeit.autorange method was introduced in Python 3.6
+                    and is used to automatically determine how many times to
+                    call timeit in the provided notebook.
                 </p>
+
+                <h2>
+                    Methodology
+                </h2>
+
+                <p>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Overhead -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Pandas Overhead Costs</h2>
+
+                <p>
+                    Pandas has a multitude of well thought out quality
+                    methods, but there is a price to pay to get them.
+                    A younger version of myself used to think, "Straight up
+                    Numpy is good enough for me.", and I refused to even
+                    consider a number of great packages.
+                    Now that I've been reformed, one of the key ideas I
+                    learned is use the packages that are out there, and when
+                    something doesn't seem quite right, then it's time to
+                    dig a little deeper.
+                </p>
+
+                <p>
+                    When equivalent operations are performed in Numpy and
+                    Pandas, Numpy is clearly faster.
+                    The sunburst graphics below were generated using
+                    <a href="https://jiffyclub.github.io/snakeviz/">
+                        SNAKEVIZ
+                    </a>, which works with
+                    <a href="https://docs.python.org/3.6/library/profile.html">
+                        cProfiler
+                    </a> to display what is happening in the interpreter when
+                    code is executed.
+                </p>
+
+                <pre>
+                    <code>
+                        arr = np.arange(1e6)
+                    </code>
+                </pre>
+
+                <pre>
+                    <code>
+                        ser = pd.Series(np.arange(1e6))
+                    </code>
+                </pre>
+
+                <pre>
+                    <code>
+                        df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))
+                    </code>
+                </pre>
 
             </div>
 
