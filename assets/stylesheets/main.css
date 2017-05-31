@@ -130,13 +130,6 @@ Typography
     margin-bottom: 0px;
 }
 
-pre code {
-    background-color: #333333;
-    border: 1px solid #000000;
-    color: #ffffff;
-    display: block;
-}
-
 h1, h3, h4, h5, p {
     margin-bottom: 22px;
     color: #6b7243;
@@ -280,8 +273,42 @@ div:hover {
 (use JS to add this class to the .dropdown-content container when the user
  clicks on the dropdown button) */
 .show {display:block;}
-/*
 
+
+/*
+=========================
+Code Block
+=========================
+*/
+
+pre {
+    background-color: #333333;
+    border-radius: 0.25em;
+    box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.45);
+    counter-reset: line;
+    font-family: monospace;
+    line-height: 0;
+    margin: 4em auto;
+    padding: 0.5em;
+}
+
+pre span {
+    color:#ffffff;
+    display: block;
+    line-height: 1.5rem;
+}
+
+pre span:before {
+    border-right: 1px solid #c8bd92;
+    color: #c8bd92;
+    content: counter(line);
+    counter-increment: line;
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0 0.5em;
+}
+
+/*
 =========================
 Columns
 =========================
@@ -533,11 +560,26 @@ Lists
 =============================
 */
 
+ol {
+    list-style-type: decimal;
+}
+
+.ol-nest {
+    list-style-type: lower-roman;
+}
+
+ol,
+.ol-nest {
+    font: 14px sans-serif;
+    padding: 3px 0px 30px 30px;
+}
+
 ul {
     padding: 3px 0px 3px 30px;
 }
 
 .ul-middle {
+    font: 12px sans-serif;
     padding: 3px 0px 30px 30px;
 }
 
@@ -632,8 +674,13 @@ Tables
     padding-left: 15px;
 }
 
+.schema-text {
+    font: 14px sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .schema table {
-    margin-bottom: 44px;
+    padding-bottom: 44px;
     width: 95%;
 }
 
@@ -655,6 +702,7 @@ Tables
 
 .schema td h6 {
     font-weight: 400;
+    padding-left: 10px;
 }
 
 .schema th {

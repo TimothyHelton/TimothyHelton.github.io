@@ -67,7 +67,7 @@
 
                 <h2>
                     "I think my code is well written, but this is taking
-                    <em>forever</em> to run!"
+                    <em class="warning">forever</em> to run!"
                 </h2>
 
                 <p>
@@ -138,18 +138,67 @@
                 </h2>
 
                 <p>
-
+                    I'll use the following methods on various operations
+                    defined in the table below.
                 </p>
 
-            </div>
+                <ol>
+                    <li>Using pure Numpy</li>
+                    <li>Using pure Pandas</li>
+                    <li>Wrap a Pandas object in a Numpy method</li>
+                    <li>
+                        Conversion
+                        <ol class="ol-nest">
+                            <li>Convert a Pandas object to a Numpy object</li>
+                            <li>Perform the calculation in Numpy</li>
+                            <li>Create a new Pandas object with the</li>
+                        </ol>
+                    </li>
+                    <li>
+                        String representations of dates in the ISO 8601 format YYYY-MM-DD
+                    </li>
+                    <li>
+                        String representations of dates in MM/DD/YYYY format
+                    </li>
+                </ol>
 
-        </section>
+                <table class="schema">
+                    <thead>
+                        <tr>
+                            <td scope="row">
+                                <h5>Operation</h5>
+                                <h6>Pandas Series Addition</h6>
+                                <h6>Pandas Series Multiplication</h6>
+                                <h6>Pandas DataFrame Addition Down Columns</h6>
+                                <h6>
+                                    Pandas DataFrame Multiplication Down
+                                    Columns
+                                </h6>
+                                <h6>Pandas DataFrame Addition Across Rows</h6>
+                                <h6>
+                                    Pandas DataFrame Multiplication Across
+                                    Rows
+                                </h6>
+                                <h6>Pandas DataFrame Element-Wise Applymap</h6>
+                                <h6>Pandas Date String Format</h6>
+                            </td>
 
-        <!-- Overhead -->
+                            <td scope="row">
+                                <h5>Application Method</h5>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 3, 4</h6>
+                                <h6>1, 2, 4</h6>
+                                <h6>5, 6</h6>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
 
-        <section class="row">
-
-            <div class="col-3-4">
+                <br>
 
                 <h2>Pandas Overhead Costs</h2>
 
@@ -160,7 +209,7 @@
                     Numpy is good enough for me.", and I refused to even
                     consider a number of great packages.
                     Now that I've been reformed, one of the key ideas I
-                    learned is use the packages that are out there, and when
+                    learned is, use the packages that are out there, and when
                     something doesn't seem quite right, then it's time to
                     dig a little deeper.
                 </p>
@@ -174,27 +223,36 @@
                     </a>, which works with
                     <a href="https://docs.python.org/3.6/library/profile.html">
                         cProfiler
-                    </a> to display what is happening in the interpreter when
+                    </a> to display the calls made to the interpreter when
                     code is executed.
                 </p>
 
                 <pre>
-                    <code>
-                        arr = np.arange(1e6)
-                    </code>
+                    <span>arr = np.arange(1e6)</span>
                 </pre>
 
-                <pre>
-                    <code>
-                        ser = pd.Series(np.arange(1e6))
-                    </code>
-                </pre>
+                <img class="center-img"
+                     src="assets/images/numpy_array_profile.png"
+                     height="300px"
+                     alt="Numpy Array Profile">
 
                 <pre>
-                    <code>
-                        df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))
-                    </code>
+                    <span>ser = pd.Series(np.arange(1e6))</span>
                 </pre>
+
+                <img class="center-img"
+                     src="assets/images/pandas_series_profile.png"
+                     height="300px"
+                     alt="Pandas Series Profile">
+
+                <pre>
+                    <span>df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))</span>
+                </pre>
+
+                <img class="center-img"
+                     src="assets/images/pandas_df_profile.png"
+                     height="300px"
+                     alt="Pandas DataFrame Profile">
 
             </div>
 
