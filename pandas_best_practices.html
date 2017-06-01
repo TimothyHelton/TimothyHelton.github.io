@@ -83,8 +83,8 @@
                     I have been fortunate enough to attend two different training
                     courses put on by
                     <a href="https://www.enthought.com/">
-                    Enthought Scientific Computing Solutions
-                    </a>.
+                    Enthought Scientific Computing Solutions.
+                    </a>
                     The
                     <a href="https://www.enthought.com/services/training/instructors/">
                     instructors
@@ -92,9 +92,9 @@
                     highly knowledgeable professionals.
                     The most recent class was
                     <a href="https://www.enthought.com/services/training/pandas-mastery-workshop/">
-                    Pandas Mastery Workshop
-                    </a>, which I would highly recommend.
-                    During the course Alexandre made numerous comments about
+                    Pandas Mastery Workshop,
+                    </a> which I would highly recommend.
+                    During the course, Alexandre made numerous comments about
                     performance differences, and I wanted to document some
                     surprising methods to speed up
                     <a href="http://pandas.pydata.org/">
@@ -139,62 +139,102 @@
 
                 <p>
                     I'll use the following methods on various operations
-                    defined in the table below.
+                    defined in the table.
                 </p>
-
-                <ol>
-                    <li>Using pure Numpy</li>
-                    <li>Using pure Pandas</li>
-                    <li>Wrap a Pandas object in a Numpy method</li>
-                    <li>
-                        Conversion
-                        <ol class="ol-nest">
-                            <li>Convert a Pandas object to a Numpy object</li>
-                            <li>Perform the calculation in Numpy</li>
-                            <li>Create a new Pandas object with the</li>
-                        </ol>
-                    </li>
-                    <li>
-                        String representations of dates in the ISO 8601 format YYYY-MM-DD
-                    </li>
-                    <li>
-                        String representations of dates in MM/DD/YYYY format
-                    </li>
-                </ol>
 
                 <table class="schema">
                     <thead>
+
+                        <tr class="bb">
+                            <th>Operation</th>
+                            <th>Application Method</th>
+                        </tr>
+
                         <tr>
-                            <td scope="row">
-                                <h5>Operation</h5>
+                            <td>
                                 <h6>Pandas Series Addition</h6>
+                            </td>
+                            <td rowspan="6">
+                                <ol>
+                                    <li><h6>Pure Numpy</h6></li>
+                                    <li><h6>Pure Pandas</h6></li>
+                                    <li><h6>Wrap a Pandas object in a Numpy method</h6></li>
+                                    <li><h6>Conversion</h6></li>
+                                    <ol class="ol-nest">
+                                        <li>Convert a Pandas object to a Numpy object</li>
+                                        <li>Perform the calculation in Numpy</li>
+                                        <li>
+                                            Create a new Pandas object from
+                                            the Numpy results
+                                        </li>
+                                    </ol>
+                                </ol>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
                                 <h6>Pandas Series Multiplication</h6>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
                                 <h6>Pandas DataFrame Addition Down Columns</h6>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
                                 <h6>
                                     Pandas DataFrame Multiplication Down
                                     Columns
                                 </h6>
-                                <h6>Pandas DataFrame Addition Across Rows</h6>
-                                <h6>
-                                    Pandas DataFrame Multiplication Across
-                                    Rows
-                                </h6>
-                                <h6>Pandas DataFrame Element-Wise Applymap</h6>
-                                <h6>Pandas Date String Format</h6>
-                            </td>
-
-                            <td scope="row">
-                                <h5>Application Method</h5>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 3, 4</h6>
-                                <h6>1, 2, 4</h6>
-                                <h6>5, 6</h6>
                             </td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <h6>Pandas DataFrame Addition Across Rows</h6>
+                            </td>
+                        </tr>
+
+                        <tr class="bb">
+                            <td>
+                                <h6>
+                                    Pandas DataFrame Multiplication Across Rows
+                                </h6>
+                            </td>
+                        </tr>
+
+                        <tr class="bb">
+                            <td>
+                                <h6>Pandas DataFrame Element-Wise Applymap</h6>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li><h6>Pure Numpy</h6></li>
+                                    <li><h6>Pure Pandas</h6></li>
+                                    <li><h6>Conversion</h6></li>
+                                </ol>
+                            </td>
+                        </tr>
+
+
+                        <tr class="bb">
+                            <td>
+                                <h6>Pandas Date String Format</h6>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>
+                                        <h6>ISO 8601 Format YYYY-MM-DD</h6>
+                                    </li>
+                                    <li><h6>MM/DD/YYYY Format</h6></li>
+                                </ol>
+                            </td>
+                        </tr>
+
                     </thead>
                 </table>
 
@@ -206,16 +246,16 @@
                     Pandas has a multitude of well thought out quality
                     methods, but there is a price to pay to get them.
                     A younger version of myself used to think, "Straight up
-                    Numpy is good enough for me.", and I refused to even
-                    consider a number of great packages.
+                    Numpy is good enough for me."
+                    I refused to even consider a number of great packages.
                     Now that I've been reformed, one of the key ideas I
-                    learned is, use the packages that are out there, and when
-                    something doesn't seem quite right, then it's time to
+                    learned is to use the packages that are out there.
+                    When something doesn't seem quite right, it's time to
                     dig a little deeper.
                 </p>
 
                 <p>
-                    When equivalent operations are performed in Numpy and
+                    If equivalent operations are performed in Numpy and
                     Pandas, Numpy is clearly faster.
                     The sunburst graphics below were generated using
                     <a href="https://jiffyclub.github.io/snakeviz/">
@@ -264,9 +304,26 @@
 
             <div class="col-3-4">
 
-                <h2>Series Numerical Operations</h2>
+                <h2>Pandas Series Numerical Operations</h2>
 
                 <p>
+                    For numerical operations, one would expect Numpy to be
+                    faster than Pandas and that is the case.
+                    In this section, mathematical addition and multiplication
+                    examples employing the optimized methods for each package
+                    were used.
+                    Later on we'll take a look at an example of when the
+                    Pandas mapping function is utilized.
+                    The surprising discovery from this round of profiling is
+                    that wrapping a Pandas object with a Numpy method provides
+                    essentially no performance benefit.
+                    It's also interesting to note that the multiplication
+                    operator is slightly faster than the addition operator.
+                    And yet a bigger surprise still is that converting a
+                    Pandas object to a Numpy object, performing a
+                    calculation, and then crating a new Pandas object takes
+                    less than half the time to just do the calculation in
+                    Pandas!
                 </p>
 
                 <img class="center-img"
@@ -287,34 +344,27 @@
 
             <div class="col-3-4">
 
-                <h2>DataFrame Numerical Operations</h2>
+                <h2>Pandas DataFrame Numerical Operations</h2>
 
                 <p>
+                    The results for Pandas DataFrames are similar to the
+                    Series.
+                    Again, multiplication is just a bit quicker than
+                    addition and the conversion technique provides great
+                    improvements in execution time.
                 </p>
 
                 <img class="center-img"
                      src="assets/images/df_addition_cols_profile.png"
                      alt="DataFrame Addition Columns Profile">
 
-                <p>
-
-                </p>
-
                 <img class="center-img"
                      src="assets/images/df_multiplication_cols_profile.png"
                      alt="DataFrame Multiplication Columns Profile">
 
-                <p>
-
-                </p>
-
                 <img class="center-img"
                      src="assets/images/df_addition_rows_profile.png"
                      alt="DataFrame Addition Rows Profile">
-
-                <p>
-
-                </p>
 
                 <img class="center-img"
                      src="assets/images/df_multiplication_rows_profile.png"
@@ -333,6 +383,30 @@
                 <h2>Aggregate Methods</h2>
 
                 <p>
+                    Pandas does have a couple methods built to perform
+                    element-wise operations.
+                    For Series, there is
+                    <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.map.html">
+                        map
+                    </a>
+                    and DataFrames use
+                    <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.apply.html">
+                        apply
+                    </a>
+                    and
+                    <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.applymap.html">
+                        applymap
+                    </a>.
+                    With the current implementation of these methods, Pandas
+                    ends up calling a for loop in Python for map and apply,
+                    and a nested for loop in Python for applymap.
+                    This is where using the conversion technique could be a
+                    game changer.
+                    Once in Numpy, the operations are performed in a
+                    vectorized manner using optimized C routines.
+                    The performance gains will be relative to your array
+                    size, and in this case for one million elements there
+                    was an increase in speed by more than 400 times!
                 </p>
 
                 <img class="center-img"
@@ -352,11 +426,113 @@
                 <h2>Date String Formats</h2>
 
                 <p>
+                    If you read the documentation carefully for most of the
+                    methods related to importing time in Pandas, you will see
+                    there is a fast path for strings formatted in ISO 8601.
                 </p>
+
+                <pre>
+                    <span>iso_8601_format = 'YYYY-MM-DD'</span>
+                </pre>
+
+                <p>
+                    The current profiling for this aspect of the code
+                    yielded a speed increase of four time just by altering the
+                    string format.
+                    There are two takeaways here:
+                    <ol>
+                        <li>
+                            If you are able to control the gathering of date,
+                            chose to use the ISO 8601 format.
+                        </li>
+                        <li>
+                            If you have a large amount of times to convert
+                            in Pandas, it may be worth pre-processing them
+                            into the ISO 8601 format prior to loading into
+                            Pandas.
+                        </li>
+
+                    </ol>
+                </p>
+
 
                 <img class="center-img"
                      src="assets/images/date_format_profile.png"
                      alt="Date Format Profile">
+
+            </div>
+
+        </section>
+
+        <!-- Conclusions -->
+
+        <section class="row">
+
+            <div class="col-3-4">
+
+                <h2>Conclusions</h2>
+
+                <p>
+                    The key points to take away from this article are:
+                </p>
+
+                <ul>
+                    <li>
+                        Pandas does perform slower than Numpy,
+                        <em class="warning">but</em>
+                        has a ton of really great features.
+                        <ol class="ol-nest">
+                            <li>If you haven't given Pandas a try, now is a
+                                great time to check it out.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        To increase the execution time of numerical
+                        operators in Pandas:
+                        <ol class="ol-nest">
+                            <li>Convert them to Numpy objects</li>
+                            <li>Perform the calculation</li>
+                            <li>
+                                Create a new Pandas object from the Numpy
+                                result
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Multiplication operations are slightly faster than
+                        addition.
+                    </li>
+                    <li>
+                        Avoid the use of Pandas map, apply and applymap
+                        methods.
+                        <ol class="ol-nest">
+                            <li>
+                                These implementations end up evaluating
+                                element-wise operations in Python for loops
+                                and there is a heavy performance penalty.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        When dealing with converting strings of dates to
+                        be used in Pandas, try to format the string in
+                        accordance with ISO 8601 (YYYY-MM-DD).
+                        <ol class="ol-nest">
+                            <li>
+                                Pandas is optimized for this format and that
+                                makes your code run faster.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <br>
+
+                <p>
+                    So on your next project, remember these simple tips and
+                    you'll be able to change the world a little faster!
+                </p>
 
             </div>
 

@@ -561,17 +561,23 @@ Lists
 */
 
 ol {
-    list-style-type: decimal;
+    padding: 3px 0px 30px 30px;
 }
 
 .ol-nest {
+    font: 14px sans-serif;
     list-style-type: lower-roman;
+    padding: 3px 0px 3px 30px;
+}
+
+table ol {
+    padding: 3px 0px 3px 30px;
 }
 
 ol,
-.ol-nest {
+table ol {
     font: 14px sans-serif;
-    padding: 3px 0px 30px 30px;
+    list-style-type: decimal;
 }
 
 ul {
@@ -669,6 +675,10 @@ Primary Header
 Tables
 =============================
 */
+
+.bb {
+    border-bottom: 1px solid black;
+}
 
 .schema {
     padding-left: 15px;
