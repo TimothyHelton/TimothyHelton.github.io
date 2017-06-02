@@ -355,9 +355,22 @@ Columns
 
 /*
 =========================
+Comments
+=========================
+*/
+
+.comments {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+/*
+=========================
 D3
 =========================
- */
+*/
 
 /*
 ++++++++++
@@ -640,7 +653,7 @@ Primary Header
     font-weight: 100;
     letter-spacing: .1em;
     line-height: 44px;
-    padding: 40px 0 22px 0;
+    padding: 40px 0 0 0;
     text-transform: uppercase;
 }
 
