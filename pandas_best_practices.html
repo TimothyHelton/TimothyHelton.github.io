@@ -63,26 +63,60 @@
 
         <section class="row">
 
-            <div class="col-3-4">
+            <div class="grid">
 
+                <section class="col-1-4">
 
-                <h2>
-                    "I think my code is well written, but this is taking
-                    <em class="warning">forever</em> to run!"
-                </h2>
+                    <ul class="ul-contents">
+                        <li><a href="#Background">Background</a></li>
+                        <li><a href="#Notebook">Notebook</a></li>
+                        <li><a href="#Versions">Versions</a></li>
+                        <li><a href="#Methodology">Methodology</a></li>
+                        <li>
+                            <a href="#PandasOverheadCosts">Pandas Overhead</a>
+                        </li>
+                        <li><a href="#PandasSeries">Pandas Series</a></li>
+                        <li>
+                            <a href="#PandasDataFrame">Pandas DataFrame</a>
+                        </li>
+                        <li>
+                            <a href="#AggregateMethods">Aggregate Methods</a>
+                        </li>
+                        <li><a href="#DateFormats">Date Formats</a></li>
+                        <li><a href="#Conclusions">Conclusions</a></li>
+                    </ul>
+
+                </section><!--
+
+                Content
+
+                --><section class="col-2-3">
+
+                    <h1>
+                        "I think my code is well written, but this is
+                        taking <em class="warning">forever</em> to run!"
+                    </h1>
+
+                    <h3>
+                        This article is going to display that sometimes
+                        processing speedups come in strange places.
+                        Hopefully, you will learn a trick or two and be
+                        able to write some better code on your project.
+                    </h3>
+
+                </section>
+
+            </div>
+
+            <div class="col-1-1">
+
+                <br>
+                <a name="Background"></a>
+                <h2>Background</h2>
 
                 <p>
-                    This article is going to display that sometimes
-                    processing speedups come in strange places.
-                    Hopefully, you will learn a trick or two and be able to
-                    write some better code on your project.
-                </p>
-
-                <h2>Backgroud</h2>
-
-                <p>
-                    I have been fortunate enough to attend two different training
-                    courses put on by
+                    I have been fortunate enough to attend two different
+                    training courses put on by
                     <a href="https://www.enthought.com/">
                     Enthought Scientific Computing Solutions.
                     </a>
@@ -103,16 +137,18 @@
                     </a>.
                 </p>
 
+                <a name="Notebook"></a>
                 <h2>Notebook</h2>
 
                 <p>
-                    The notebook with all the code to recreate this study is
-                    located
+                    The notebook with all the code to recreate this study
+                    is located
                     <a href="https://github.com/TimothyHelton/algorithms/blob/master/notebooks/Execution_Time.ipynb">
                     here
                     </a>.
                 </p>
 
+                <a name="Versions"></a>
                 <h2>Versions</h2>
 
                 <p>
@@ -129,11 +165,13 @@
                 <p class="warning">
                     NOTE:
 
-                    The timeit.autorange method was introduced in Python 3.6
-                    and is used to automatically determine how many times to
-                    call timeit in the provided notebook.
+                    The timeit.autorange method was introduced in Python
+                    3.6 and is used to automatically determine how many
+                    times to call timeit in the provided notebook.
                 </p>
 
+
+                <a name="Methodology"></a>
                 <h2>
                     Methodology
                 </h2>
@@ -159,11 +197,21 @@
                                 <ol>
                                     <li><h6>Pure Numpy</h6></li>
                                     <li><h6>Pure Pandas</h6></li>
-                                    <li><h6>Wrap a Pandas object in a Numpy method</h6></li>
+                                    <li>
+                                        <h6>
+                                            Wrap a Pandas object in a Numpy
+                                            method
+                                        </h6>
+                                    </li>
                                     <li><h6>Conversion</h6></li>
                                     <ol class="ol-nest">
-                                        <li>Convert a Pandas object to a Numpy object</li>
-                                        <li>Perform the calculation in Numpy</li>
+                                        <li>
+                                            Convert a Pandas object to a Numpy
+                                            object
+                                        </li>
+                                        <li>
+                                            Perform the calculation in Numpy
+                                        </li>
                                         <li>
                                             Create a new Pandas object from
                                             the Numpy results
@@ -241,6 +289,7 @@
 
                 <br>
 
+                <a name="PandasOverheadCosts"></a>
                 <h2>Pandas Overhead Costs</h2>
 
                 <p>
@@ -295,16 +344,9 @@
                      height="300px"
                      alt="Pandas DataFrame Profile">
 
-            </div>
+                <!-- Series Numerical Operations -->
 
-        </section>
-
-        <!-- Series Numerical Operations -->
-
-        <section class="row">
-
-            <div class="col-3-4">
-
+                <a name="PandasSeries"></a>
                 <h2>Pandas Series Numerical Operations</h2>
 
                 <p>
@@ -335,16 +377,9 @@
                      src="assets/images/series_multiplication_profile.png"
                      alt="Series Multiplication Profile">
 
-            </div>
+                <!-- DataFrame Numerical Operations -->
 
-        </section>
-
-        <!-- DataFrame Numerical Operations -->
-
-        <section class="row">
-
-            <div class="col-3-4">
-
+                <a name="PandasDataFrame"></a>
                 <h2>Pandas DataFrame Numerical Operations</h2>
 
                 <p>
@@ -371,16 +406,9 @@
                      src="assets/images/df_multiplication_rows_profile.png"
                      alt="DataFrame Muliplication Rows Profile">
 
-            </div>
+                <!-- Aggregate -->
 
-        </section>
-
-        <!-- Aggregate -->
-
-        <section class="row">
-
-            <div class="col-3-4">
-
+                <a name="AggregateMethods"></a>
                 <h2>Aggregate Methods</h2>
 
                 <p>
@@ -414,16 +442,9 @@
                      src="assets/images/df_applymap_profile.png"
                      alt="">
 
-            </div>
+                <!-- Date Formats -->
 
-        </section>
-
-        <!-- Date Formats -->
-
-        <section class="row">
-
-            <div class="col-3-4">
-
+                <a name="DateFormats"></a>
                 <h2>Date String Formats</h2>
 
                 <p>
@@ -461,16 +482,9 @@
                      src="assets/images/date_format_profile.png"
                      alt="Date Format Profile">
 
-            </div>
+                <!-- Conclusions -->
 
-        </section>
-
-        <!-- Conclusions -->
-
-        <section class="row">
-
-            <div class="col-3-4">
-
+                <a name="Conclusions"></a>
                 <h2>Conclusions</h2>
 
                 <p>
@@ -530,10 +544,10 @@
 
                 <br>
 
-                <p>
+                <h3>
                     So on your next project, remember these simple tips and
                     you'll be able to change the world a little faster!
-                </p>
+                </h3>
 
             </div>
 
