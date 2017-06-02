@@ -39,6 +39,17 @@
       ]
     },
     {
+      "name": "Pandas Best Practices",
+      "type": "project",
+      "children": [
+        {
+          "name": "Python",
+          "type": "python",
+          "url": "pandas_best_practices.html"
+        }
+      ]
+    },
+    {
       "name": "Strumenti",
       "type": "project",
       "children": [
@@ -51,17 +62,6 @@
           "name": "Sphinx",
           "type": "documentation",
           "url": "https://github.com/TimothyHelton/strumenti/tree/devel/docs"
-        }
-      ]
-    },
-    {
-      "name": "Pandas Best Practices",
-      "type": "project",
-      "children": [
-        {
-          "name": "Python",
-          "type": "python",
-          "url": "pandas_best_practices.html"
         }
       ]
     },
