@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Timothy Helton</title>
+
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Timothy Helton's Projects"/>
+
+        <link rel="stylesheet" type="text/css"
+              href="assets/stylesheets/main.css">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+
+        <header class="primary-header container group">
+
+            <h1 class="logo">
+                <a href="index.html">Timothy Helton</a>
+            </h1>
+
+            <h3 class="tagline">Learn Something New Every Day</h3>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li><a href="blog.html">Blog</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Hero -->
+
+        <section class="row-alt">
+
+            <div class="hero container">
+
+                <h2>Strumenti</h2>
+
+            </div>
+
+        </section>
+
+         <!-- Teaser -->
+
+        <section class="row">
+
+            <div class="grid">
+
+                <section class="col-1-4">
+
+                    <ul class="ul-contents">
+                        <li><a href="#Background">Background</a></li>
+                        <li><a href="#Installation">Installation</a></li>
+                        <li><a href="#Versions">Versions</a></li>
+                        <li><a href="#Documentation">Content</a></li>
+                        <li><a href="#Testing">Testing</a></li>
+                        <li><a href="#Modules">Modules</a></li>
+                    </ul>
+
+                </section><!--
+
+                Content
+
+                --><section class="col-2-3">
+
+                    <h1>
+                        Strumenti Python Package
+                    </h1>
+
+                    <h3>
+                        <em>
+                            "Duplication is the primary enemy of a
+                            well-designed system."
+                        </em>
+                        <p><strong>~Robert C. Martin</strong></p>
+                    </h3>
+
+                </section>
+
+            </div>
+
+            <div class="col-1-1">
+                <br>
+
+                <a name="Background"></a>
+                <h2>Background</h2>
+
+                <p>
+                    Strumenti is a common set of utilities written for the
+                    Python language.
+                </p>
+
+                <p>
+                    One day I found myself recreating a method from a
+                    previous project and decided to make a central
+                    repository to store general code.
+                    In the process I also learned how to create a Python
+                    package.
+                    Setting up a Python package is not hard and there are
+                    bunch of great examples of how to do it elegantly.
+                    I found
+                    <a href="https://pypi.python.org/pypi/numpy/">
+                        NumPy
+                    </a>
+                    and
+                    <a href="https://pypi.python.org/pypi/requests">
+                        requests
+                    </a>
+                    to be excellent real world examples, which implemented
+                    good practices.
+                </p>
+
+                <a name="Installation"></a>
+                <h2>Installation</h2>
+
+                <p>
+                    <a href="https://pypi.python.org/pypi/strumenti">
+                        Strumenti
+                    </a>
+                    is on the Python Package Index, so installation is just one
+                    pip command away.
+                </p>
+
+                <pre>
+                    <span>pip install strumenti</span>
+                </pre>
+
+                <a name="Versions"></a>
+                <h2>Versions</h2>
+
+                <ul>
+                    <li>Python 3</li>
+                </ul>
+
+                <a name="Documentation"></a>
+                <h2>Documentation</h2>
+
+                <p>
+                    An auto generated API is created for the project using
+                    <a href="http://www.sphinx-doc.org/">SPHINX,</a>
+                    and is hosted by
+                    <a href="https://readthedocs.org/">
+                        Read the Docs.
+                    </a>
+                </p>
+
+                <p>
+                    Click
+                    <a href="http://strumenti.readthedocs.io/en/latest/">
+                        here
+                    </a>
+                    to see the latest version of the documentation.
+                </p>
+
+                <p>
+                    <em class="warning">Warning:</em>
+                    Read the Doc is in the process of updating to allow
+                    documentation to be built utilizing Python versions after
+                    3.4.
+                    Once this upgrade is complete the full documentation
+                    will be available on Read the Docs.
+                </p>
+
+                <a name="Testing"></a>
+                <h2>Testing</h2>
+
+                <p>
+                    Unit Tests for this package are written using
+                    <a href="https://docs.pytest.org/en/latest/">
+                        pytest.
+                    </a>
+                </p>
+
+                <a name="Modules"></a>
+                <h2>Modules</h2>
+
+                <br>
+                <table class="schema">
+                    <thead>
+                        <tr>
+                            <th scope="row">
+                                <h6>coordinate</h6>
+                                <h6>notify</h6>
+                                <h6>plot</h6>
+                                <h6>psql</h6>
+                                <h6>system</h6>
+                            </th>
+
+                            <td scope="row">
+                                <h6>Coordinate Transformations</h6>
+                                <h6>Standardized User Notifications</h6>
+                                <h6>Plotting Utilities</h6>
+                                <h6>PostgreSQL Utilities</h6>
+                                <h6>System Utilities</h6>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="primary-footer container group">
+
+            <small>&copy; Timothy Helton</small>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li><a href="blog.html">Blog</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </footer>
+
+    </body>
+
+</html>
