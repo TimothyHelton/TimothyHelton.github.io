@@ -56,12 +56,12 @@
         {
           "name": "Python",
           "type": "python",
-          "url": "https://github.com/TimothyHelton/strumenti"
+          "url": "strumenti.html"
         },
         {
           "name": "Sphinx",
           "type": "documentation",
-          "url": "https://github.com/TimothyHelton/strumenti"
+          "url": "strumenti.html"
         }
       ]
     },
