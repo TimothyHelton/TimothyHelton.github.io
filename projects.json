@@ -9,32 +9,32 @@
         {
           "name": "Requests",
           "type": "web_scraping",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         },
         {
           "name": "NumPy",
           "type": "python",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         },
         {
           "name": "Pandas",
           "type": "python",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         },
         {
           "name": "Jupyter Notebook",
           "type": "python",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         },
         {
           "name": "Matplotlib",
           "type": "visualization",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         },
         {
           "name": "Sphinx",
           "type": "documentation",
-          "url": "nyc_canvas.html"
+          "url": "nyc_signature.html"
         }
       ]
     },
