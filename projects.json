@@ -3,38 +3,38 @@
   "type": "root",
   "children": [
     {
-      "name": "NYC MTA Turnstile",
+      "name": "NYC Signature Locations",
       "type": "project",
       "children": [
         {
           "name": "Requests",
           "type": "web_scraping",
-          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
+          "url": "nyc_canvas.html"
         },
         {
           "name": "NumPy",
           "type": "python",
-          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
+          "url": "nyc_canvas.html"
         },
         {
           "name": "Pandas",
           "type": "python",
-          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
+          "url": "nyc_canvas.html"
         },
         {
           "name": "Jupyter Notebook",
           "type": "python",
-          "url": "https://github.com/TimothyHelton/k2datascience/blob/master/notebooks/EDA_MTA_Exercises.ipynb"
+          "url": "nyc_canvas.html"
         },
         {
           "name": "Matplotlib",
           "type": "visualization",
-          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
+          "url": "nyc_canvas.html"
         },
         {
           "name": "Sphinx",
           "type": "documentation",
-          "url": "https://github.com/TimothyHelton/k2datascience/tree/master/k2datascience"
+          "url": "nyc_canvas.html"
         }
       ]
     },

@@ -49,7 +49,7 @@
 
             <div class="hero container">
 
-                <h2>Blog Entries</h2>
+                <h2>New York City Signature Locations</h2>
 
             </div>
 
@@ -59,19 +59,70 @@
 
         <section class="row">
 
-            <div class="col-1-2">
+            <div class="grid">
 
-                <a href="nyc_signature.html">
-                    <h3>New York City Signature Locations</h3>
-                </a>
+                <section class="col-1-4">
 
-                <a href="pandas_best_practices.html">
-                    <h3>Pandas Best Practices</h3>
-                </a>
+                    <ul class="ul-contents">
+                        <li><a href="#Background">Background</a></li>
+                        <li><a href="#Installation">Installation</a></li>
+                        <li><a href="#Versions">Versions</a></li>
+                        <li><a href="#Documentation">Content</a></li>
+                        <li><a href="#Testing">Testing</a></li>
+                        <li><a href="#Modules">Modules</a></li>
+                    </ul>
+
+                </section><!--
+
+                Content
+
+                --><section class="col-2-3">
+
+                    <h1>
+                        Canvas NYC for Signature Locations
+                    </h1>
+
+                    <h3>
+                        Find the people and the signatures will follow.
+                    </h3>
+
+                </section>
+
+            </div>
+
+            <div class="col-1-1">
+                <br>
+
+                <a name="Background"></a>
+                <h2>Background</h2>
+
+                <p>
+                    This project investigates the
+                </p>
 
             </div>
 
         </section>
+
+        <!-- Disqus Comments -->
+
+        <div class="comments" id="disqus_thread"></div>
+        <script>
+
+        var disqus_config = function () {
+            this.page.url = "ENTER_URL_HERE";
+            this.page.identifier = "<? php echo $my_identifier; ?>";
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://timothyhelton-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <script id="dsq-count-scr" src="//timothyhelton-github-io.disqus.com/count.js" async></script>
 
         <!-- Footer -->
 
