@@ -588,7 +588,7 @@ ol {
 }
 
 .ol-nest {
-    font: 14px sans-serif;
+    font-size: 16px;
     list-style-type: lower-roman;
     padding: 3px 0px 3px 30px;
 }
@@ -599,7 +599,7 @@ table ol {
 
 ol,
 table ol {
-    font: 14px sans-serif;
+    font-size: 16px;
     list-style-type: decimal;
 }
 
@@ -608,24 +608,24 @@ ul {
 }
 
 .ul-middle {
-    font: 12px sans-serif;
+    font-size: 16px;
     padding: 3px 0px 30px 30px;
 }
 
 ul,
 .ul-middle {
-    font: 14px sans-serif;
+    font-size: 16px;
     list-style-type: disc;
 }
 
 .ul-nest {
-    font: 12px sans-serif;
+    font-size: 16px;
     list-style-type: square;
 }
 
 .ul-contents {
     border: 1px solid black;
-    font: 18px sans-serif;
+    font-size: 18px;
 }
 
 /*
@@ -713,7 +713,7 @@ Tables
 }
 
 .schema-text {
-    font: 14px sans-serif;
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
 }

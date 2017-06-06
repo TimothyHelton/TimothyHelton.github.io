@@ -49,11 +49,11 @@
 
             <div class="hero container">
 
-                <h2>Pandas Best Practices</h2>
+                <h2>pandas Best Practices</h2>
 
                 <img class="center-img"
                      src="assets/images/python_pandas_logo.png"
-                     alt="Python Pandas Logo">
+                     alt="Python pandas Logo">
 
             </div>
 
@@ -67,7 +67,7 @@
 
                 <section class="col-1-4">
 
-                    <h2>June 1, 2017</h2>
+                    <h2>June 6, 2017</h2>
 
                     <ul class="ul-contents">
                         <li><a href="#Background">Background</a></li>
@@ -75,11 +75,11 @@
                         <li><a href="#Versions">Versions</a></li>
                         <li><a href="#Methodology">Methodology</a></li>
                         <li>
-                            <a href="#PandasOverheadCosts">Pandas Overhead</a>
+                            <a href="#pandasOverheadCosts">pandas Overhead</a>
                         </li>
-                        <li><a href="#PandasSeries">Pandas Series</a></li>
+                        <li><a href="#pandasSeries">pandas Series</a></li>
                         <li>
-                            <a href="#PandasDataFrame">Pandas DataFrame</a>
+                            <a href="#pandasDataFrame">pandas DataFrame</a>
                         </li>
                         <li>
                             <a href="#AggregateMethods">Aggregate Methods</a>
@@ -129,13 +129,13 @@
                     highly knowledgeable professionals.
                     The most recent class was
                     <a href="https://www.enthought.com/services/training/pandas-mastery-workshop/">
-                    Pandas Mastery Workshop,
+                    pandas Mastery Workshop,
                     </a> which I would highly recommend.
                     During the course, Alexandre made numerous comments about
                     performance differences, and I wanted to document some
                     surprising methods to speed up
                     <a href="http://pandas.pydata.org/">
-                    Pandas
+                    pandas
                     </a>.
                 </p>
 
@@ -160,8 +160,8 @@
 
                 <ul class="ul-middle">
                     <li>Python: 3.6.1</li>
-                    <li>Numpy: 1.12.1</li>
-                    <li>Pandas: 0.20.1</li>
+                    <li>NumPy: 1.12.1</li>
+                    <li>pandas: 0.20.1</li>
                 </ul>
 
                 <p class="warning">
@@ -193,30 +193,30 @@
 
                         <tr>
                             <td>
-                                <h6>Pandas Series Addition</h6>
+                                <h6>pandas Series Addition</h6>
                             </td>
                             <td rowspan="6">
                                 <ol>
-                                    <li><h6>Pure Numpy</h6></li>
-                                    <li><h6>Pure Pandas</h6></li>
+                                    <li><h6>Pure NumPy</h6></li>
+                                    <li><h6>Pure pandas</h6></li>
                                     <li>
                                         <h6>
-                                            Wrap a Pandas object in a Numpy
+                                            Wrap a pandas object in a NumPy
                                             method
                                         </h6>
                                     </li>
                                     <li><h6>Conversion</h6></li>
                                     <ol class="ol-nest">
                                         <li>
-                                            Convert a Pandas object to a Numpy
+                                            Convert a pandas object to a NumPy
                                             object
                                         </li>
                                         <li>
-                                            Perform the calculation in Numpy
+                                            Perform the calculation in NumPy
                                         </li>
                                         <li>
-                                            Create a new Pandas object from
-                                            the Numpy results
+                                            Create a new pandas object from
+                                            the NumPy results
                                         </li>
                                     </ol>
                                 </ol>
@@ -225,20 +225,20 @@
 
                         <tr>
                             <td>
-                                <h6>Pandas Series Multiplication</h6>
+                                <h6>pandas Series Multiplication</h6>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <h6>Pandas DataFrame Addition Down Columns</h6>
+                                <h6>pandas DataFrame Addition Down Columns</h6>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
                                 <h6>
-                                    Pandas DataFrame Multiplication Down
+                                    pandas DataFrame Multiplication Down
                                     Columns
                                 </h6>
                             </td>
@@ -246,26 +246,26 @@
 
                         <tr>
                             <td>
-                                <h6>Pandas DataFrame Addition Across Rows</h6>
+                                <h6>pandas DataFrame Addition Across Rows</h6>
                             </td>
                         </tr>
 
                         <tr class="bb">
                             <td>
                                 <h6>
-                                    Pandas DataFrame Multiplication Across Rows
+                                    pandas DataFrame Multiplication Across Rows
                                 </h6>
                             </td>
                         </tr>
 
                         <tr class="bb">
                             <td>
-                                <h6>Pandas DataFrame Element-Wise Applymap</h6>
+                                <h6>pandas DataFrame Element-Wise Applymap</h6>
                             </td>
                             <td>
                                 <ol>
-                                    <li><h6>Pure Numpy</h6></li>
-                                    <li><h6>Pure Pandas</h6></li>
+                                    <li><h6>Pure NumPy</h6></li>
+                                    <li><h6>Pure pandas</h6></li>
                                     <li><h6>Conversion</h6></li>
                                 </ol>
                             </td>
@@ -274,7 +274,7 @@
 
                         <tr class="bb">
                             <td>
-                                <h6>Pandas Date String Format</h6>
+                                <h6>pandas Date String Format</h6>
                             </td>
                             <td>
                                 <ol>
@@ -291,14 +291,14 @@
 
                 <br>
 
-                <a name="PandasOverheadCosts"></a>
-                <h2>Pandas Overhead Costs</h2>
+                <a name="pandasOverheadCosts"></a>
+                <h2>pandas Overhead Costs</h2>
 
                 <p>
-                    Pandas has a multitude of well thought out quality
+                    pandas has a multitude of well thought out quality
                     methods, but there is a price to pay to get them.
                     A younger version of myself used to think, "Straight up
-                    Numpy is good enough for me."
+                    NumPy is good enough for me."
                     I refused to even consider a number of great packages.
                     Now that I've been reformed, one of the key ideas I
                     learned is to use the packages that are out there.
@@ -307,8 +307,8 @@
                 </p>
 
                 <p>
-                    If equivalent operations are performed in Numpy and
-                    Pandas, Numpy is clearly faster.
+                    If equivalent operations are performed in NumPy and
+                    pandas, NumPy is clearly faster.
                     The sunburst graphics below were generated using
                     <a href="https://jiffyclub.github.io/snakeviz/">
                         SNAKEVIZ
@@ -324,9 +324,9 @@
                 </pre>
 
                 <img class="center-img"
-                     src="assets/images/numpy_array_profile.png"
+                     src="assets/images/NumPy_array_profile.png"
                      height="300px"
-                     alt="Numpy Array Profile">
+                     alt="NumPy Array Profile">
 
                 <pre>
                     <span>ser = pd.Series(np.arange(1e6))</span>
@@ -335,7 +335,7 @@
                 <img class="center-img"
                      src="assets/images/pandas_series_profile.png"
                      height="300px"
-                     alt="Pandas Series Profile">
+                     alt="pandas Series Profile">
 
                 <pre>
                     <span>df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))</span>
@@ -344,31 +344,31 @@
                 <img class="center-img"
                      src="assets/images/pandas_df_profile.png"
                      height="300px"
-                     alt="Pandas DataFrame Profile">
+                     alt="pandas DataFrame Profile">
 
                 <!-- Series Numerical Operations -->
 
-                <a name="PandasSeries"></a>
-                <h2>Pandas Series Numerical Operations</h2>
+                <a name="pandasSeries"></a>
+                <h2>pandas Series Numerical Operations</h2>
 
                 <p>
-                    For numerical operations, one would expect Numpy to be
-                    faster than Pandas and that is the case.
+                    For numerical operations, one would expect NumPy to be
+                    faster than pandas and that is the case.
                     In this section, mathematical addition and multiplication
                     examples employing the optimized methods for each package
                     were used.
                     Later on we'll take a look at an example of when the
-                    Pandas mapping function is utilized.
+                    pandas mapping function is utilized.
                     The surprising discovery from this round of profiling is
-                    that wrapping a Pandas object with a Numpy method provides
+                    that wrapping a pandas object with a NumPy method provides
                     essentially no performance benefit.
                     It's also interesting to note that the multiplication
                     operator is slightly faster than the addition operator.
                     And yet a bigger surprise still is that converting a
-                    Pandas object to a Numpy object, performing a
-                    calculation, and then crating a new Pandas object takes
+                    pandas object to a NumPy object, performing a
+                    calculation, and then creating a new pandas object takes
                     less than half the time to just do the calculation in
-                    Pandas!
+                    pandas!
                 </p>
 
                 <img class="center-img"
@@ -381,11 +381,11 @@
 
                 <!-- DataFrame Numerical Operations -->
 
-                <a name="PandasDataFrame"></a>
-                <h2>Pandas DataFrame Numerical Operations</h2>
+                <a name="pandasDataFrame"></a>
+                <h2>pandas DataFrame Numerical Operations</h2>
 
                 <p>
-                    The results for Pandas DataFrames are similar to the
+                    The results for pandas DataFrames are similar to the
                     Series.
                     Again, multiplication is just a bit quicker than
                     addition and the conversion technique provides great
@@ -414,7 +414,7 @@
                 <h2>Aggregate Methods</h2>
 
                 <p>
-                    Pandas does have a couple methods built to perform
+                    pandas does have a couple methods built to perform
                     element-wise operations.
                     For Series, there is
                     <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.map.html">
@@ -428,12 +428,12 @@
                     <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.applymap.html">
                         applymap
                     </a>.
-                    With the current implementation of these methods, Pandas
+                    With the current implementation of these methods, pandas
                     ends up calling a for loop in Python for map and apply,
                     and a nested for loop in Python for applymap.
                     This is where using the conversion technique could be a
                     game changer.
-                    Once in Numpy, the operations are performed in a
+                    Once in NumPy, the operations are performed in a
                     vectorized manner using optimized C routines.
                     The performance gains will be relative to your array
                     size, and in this case for one million elements there
@@ -451,7 +451,7 @@
 
                 <p>
                     If you read the documentation carefully for most of the
-                    methods related to importing time in Pandas, you will see
+                    methods related to importing time in pandas, you will see
                     there is a fast path for strings formatted in ISO 8601.
                 </p>
 
@@ -461,7 +461,7 @@
 
                 <p>
                     The current profiling for this aspect of the code
-                    yielded a speed increase of four time just by altering the
+                    yielded a speed increase of four times just by altering the
                     string format.
                     There are two takeaways here:
                     <ol>
@@ -471,9 +471,9 @@
                         </li>
                         <li>
                             If you have a large amount of times to convert
-                            in Pandas, it may be worth pre-processing them
+                            in pandas, it may be worth pre-processing them
                             into the ISO 8601 format prior to loading into
-                            Pandas.
+                            pandas.
                         </li>
 
                     </ol>
@@ -495,23 +495,23 @@
 
                 <ul>
                     <li>
-                        Pandas does perform slower than Numpy,
+                        pandas does perform slower than NumPy,
                         <em class="warning">but</em>
                         has a ton of really great features.
                         <ol class="ol-nest">
-                            <li>If you haven't given Pandas a try, now is a
+                            <li>If you haven't given pandas a try, now is a
                                 great time to check it out.
                             </li>
                         </ol>
                     </li>
                     <li>
                         To increase the execution time of numerical
-                        operators in Pandas:
+                        operators in pandas:
                         <ol class="ol-nest">
-                            <li>Convert them to Numpy objects</li>
+                            <li>Convert them to NumPy objects</li>
                             <li>Perform the calculation</li>
                             <li>
-                                Create a new Pandas object from the Numpy
+                                Create a new pandas object from the NumPy
                                 result
                             </li>
                         </ol>
@@ -521,7 +521,7 @@
                         addition.
                     </li>
                     <li>
-                        Avoid the use of Pandas map, apply and applymap
+                        Avoid the use of pandas map, apply and applymap
                         methods.
                         <ol class="ol-nest">
                             <li>
@@ -533,11 +533,11 @@
                     </li>
                     <li>
                         When dealing with converting strings of dates to
-                        be used in Pandas, try to format the string in
+                        be used in pandas, try to format the string in
                         accordance with ISO 8601 (YYYY-MM-DD).
                         <ol class="ol-nest">
                             <li>
-                                Pandas is optimized for this format and that
+                                pandas is optimized for this format and that
                                 makes your code run faster.
                             </li>
                         </ol>
