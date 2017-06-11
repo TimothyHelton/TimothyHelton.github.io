@@ -34,7 +34,7 @@ function fileColors(d) {
     if(d.type === "python") return "#cd5b1b";
     if(d.type === "root") return "#314d26";
     if(d.type === "visualization") return "#c19408";
-    if(d.type === "web_scrapping") return "#c8bd92";
+    if(d.type === "web_scraping") return "#c8bd92";
 }
 
 // Toggle children on click.
