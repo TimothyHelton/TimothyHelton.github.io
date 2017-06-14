@@ -556,11 +556,15 @@ Images
     margin: auto;
 }
 
-.center-img {
+.center-img,
+.pandas-best {
     display: block;
-    height: 150px;
     margin: auto;
     padding-top: 22px;
+}
+
+.pandas-best {
+    width: 700px;
 }
 
 .thesis-img {

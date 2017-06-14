@@ -53,6 +53,7 @@
 
                 <img class="center-img"
                      src="assets/images/pandas_best_practices/python_pandas_logo.png"
+                     height="150px"
                      alt="Python pandas Logo">
 
             </div>
@@ -319,32 +320,48 @@
                     code is executed.
                 </p>
 
-                <pre>
-                    <span>arr = np.arange(1e6)</span>
-                </pre>
+                <div class="grid">
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/numpy_array_profile.png"
-                     height="300px"
-                     alt="NumPy Array Profile">
+                    <section class="col-2-3">
 
-                <pre>
-                    <span>ser = pd.Series(np.arange(1e6))</span>
-                </pre>
+                        <pre>
+                            <span>arr = np.arange(1e6)</span>
+                        </pre>
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/pandas_series_profile.png"
-                     height="300px"
-                     alt="pandas Series Profile">
+                        <img class="center-img"
+                             src="assets/images/pandas_best_practices/numpy_array_profile.png"
+                             height="300px"
+                             alt="NumPy Array Profile">
 
-                <pre>
-                    <span>df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))</span>
-                </pre>
+                    </section>
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/pandas_df_profile.png"
-                     height="300px"
-                     alt="pandas DataFrame Profile">
+                    <section class="col-2-3">
+
+                        <pre>
+                            <span>ser = pd.Series(np.arange(1e6))</span>
+                        </pre>
+
+                        <img class="center-img"
+                             src="assets/images/pandas_best_practices/pandas_series_profile.png"
+                             height="300px"
+                             alt="pandas Series Profile">
+
+                    </section>
+
+                    <section class="col-2-3">
+
+                        <pre>
+                            <span>df = pd.DataFrame(np.arange(1e6).reshape(1000, 1000))</span>
+                        </pre>
+
+                        <img class="center-img"
+                             src="assets/images/pandas_best_practices/pandas_df_profile.png"
+                             height="300px"
+                             alt="pandas DataFrame Profile">
+
+                    </section>
+
+                </div>
 
                 <!-- Series Numerical Operations -->
 
@@ -371,13 +388,17 @@
                     pandas!
                 </p>
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/series_addition_profile.png"
-                     alt="Series Addition Profile">
+                <section class="col-1-1">
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/series_addition_profile.png"
+                         alt="Series Addition Profile">
+                </section><!--
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/series_multiplication_profile.png"
-                     alt="Series Multiplication Profile">
+                --><section class="col-1-1">
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/series_multiplication_profile.png"
+                         alt="Series Multiplication Profile">
+                </section>
 
                 <!-- DataFrame Numerical Operations -->
 
@@ -392,21 +413,37 @@
                     improvements in execution time.
                 </p>
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/df_addition_cols_profile.png"
-                     alt="DataFrame Addition Columns Profile">
+                <section class="col-1-1">
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/df_multiplication_cols_profile.png"
-                     alt="DataFrame Multiplication Columns Profile">
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/df_addition_cols_profile.png"
+                         alt="DataFrame Addition Columns Profile">
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/df_addition_rows_profile.png"
-                     alt="DataFrame Addition Rows Profile">
+                </section><!--
 
-                <img class="center-img"
-                     src="assets/images/pandas_best_practices/df_multiplication_rows_profile.png"
-                     alt="DataFrame Muliplication Rows Profile">
+                --><section class="col-1-1">
+
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/df_multiplication_cols_profile.png"
+                         alt="DataFrame Multiplication Columns Profile">
+
+                </section>
+
+                <section class="col-1-1">
+
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/df_addition_rows_profile.png"
+                         alt="DataFrame Addition Rows Profile">
+
+                </section><!--
+
+                --><section class="col-1-1">
+
+                    <img class="pandas-best"
+                         src="assets/images/pandas_best_practices/df_multiplication_rows_profile.png"
+                         alt="DataFrame Multiplication Rows Profile">
+
+                </section>
 
                 <!-- Aggregate -->
 
