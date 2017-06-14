@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="f368adcc-c7ed-4cbb-a504-9918b2627e4d"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"805bed73-f4e6-4847-bccd-2db1853e844b":{"roots":{"references":[{"attributes":{"callback":null,"plot":{"id":"b0843bf6-bb74-4446-a046-c2b87ce66f6f","type":"GMapPlot"},"tooltips":[["Location","@name"]]},"id":"5b008a62-a3c9-4450-9c27-58c35c86005a","type":"HoverTool"},{"attributes":{"api_key":"AIzaSyBbHu5HrfPK7i7G3ze_D_VKB9ZB1HBD9nk","map_options":{"id":"bd74f165-6ca7-4f06-9471-46eb986dd634","type":"GMapOptions"},"plot_width":400,"renderers":[{"id":"c8160c5c-a4bf-4cb4-a26c-a720e252fa5a","type":"GlyphRenderer"}],"title":{"id":"d78b3c5a-6ae5-46e9-9b24-a805e678c7e2","type":"Title"},"tool_events":{"id":"9c10c895-edc2-40bb-b54f-55fbcd8b194f","type":"ToolEvents"},"toolbar":{"id":"f1cbdf3d-8004-4623-a276-56c56273ad32","type":"Toolbar"},"x_range":{"id":"128e048c-c59d-44b0-9df9-f0daf2e545b3","type":"Range1d"},"y_range":{"id":"0530791d-5bfc-4bcb-bac2-5b848b71ac9d","type":"Range1d"}},"id":"b0843bf6-bb74-4446-a046-c2b87ce66f6f","type":"GMapPlot"},{"attributes":{"plot":null,"text":"New York City Hospitals"},"id":"d78b3c5a-6ae5-46e9-9b24-a805e678c7e2","type":"Title"},{"attributes":{"callback":null,"column_names":["name","latitude","longitude","index"],"data":{"index":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63],"latitude":{"__ndarray__":"rUeGwaFeREAM+VbamGJEQEpUuZqGYkRAtcNfkzVoREB+OEiI8mFEQHQYgtIGY0RAynildtBhRED1CUVf5mREQCS2cXrNYURArlIwGX1kREBy0X/F0F1EQAEH/gEgZURAIkA8AQNnREBtL1hgfmJEQJiwkX/Bb0RA7WEvFLBrREB2epQA61pEQC6rsBngYURAeH+8V61dREC/8bVnll9EQLWOBeD6XkRAqhs5HKdhREDPtGkR9mtEQA7aq4+HbERAVGBcBYxtREDg9C7ej2hEQPlilAylcERA+WKUDKVwRED5YpQMpXBEQAFZPoFmckRAOvk+ZrFwREBbXOMz2VNEQDsle99TUURAPCacJ+hKREBb8Q2Fz1ZEQFj/5zBfVERAtp22RgRURED3VPPB11FEQIxuGGB6VURAXw8mxcdSREBT7Ggc6lNEQFJ+Uu3TWURAzv+rjhxaREBlSSXh515EQFqvM89bX0RA3LpRGiBgRECgn04eu2BEQAeul0tPXURAbubrjbVZREB6D+GpkWBEQH1OiwtRYkRA9NmmHaNfREDVz/ZDx1tEQAEYz6ChTERArqjSYGRjREAcU3dlF2BEQKmj42pkUURAPSmTGtpKREC7U0uEV15EQPD/44QJb0RAwBYFC3FoREAPHrepy01EQO7alOEuT0RAPUfku5ROREA=","dtype":"float64","shape":[64]},"longitude":{"__ndarray__":"a26W3HJ+UsAH0RBETHxSwL7l+/P+fFLAggGEDyV8UsAV04VY/XxSwA2XsJF/fVLAowraP6p9UsArIQ7IlHtSwPLF3osvfVLAIOObt3t8UsAtTzEY7X5SwJZ9sr3xfFLAXA2ap4R9UsClsijsIn9SwIl2cAtxelLAA5Xx7zN8UsB2+6wyU4BSwEVeewsQfVLAOgxBaQN/UsB8c3/1OH5SwGwdwTJbflLAK0TRTSx9UsBzZyYYTnpSwHR9Hw4SdlLAQZ2oWyx2UsAOBugIKntSwHhMOE9QeFLAeEw4T1B4UsB4TDhPUHhSwNIyragcd1LAhouBGmN4UsANAcCxZ3pSwKI1UCqrgFLAW6YVlcN9UsB9Bz9xAHxSwNHno4y4e1LAM3PchFZ8UsAsV4nD439SwG+4NCOoflLAuU0TEVmBUsBZDpmXaHxSwCAikKZVfFLAQQ3fwrp6UsAF2Q020G5SwL6yHDKveFLAy2yhdR58UsB68erBSXRSwOg8z0R9dlLAmAy2x0F0UsA9GB01S21SwCJEQxAxe1LAmcC+59F0UsCvzjEge3NSwBSb6iQ2cFLA/E2D/TJxUsCZSGk2j21SwEi3JXLBhlLAsULbe4KFUsDOO6mKhH5SwPCxT1v+eVLAb5FqjmJ3UsC2RNN+kIFSwIVlx6FZfFLAr6oDxbR8UsA=","dtype":"float64","shape":[64]},"name":["Bellevue Hospital Center","Coler-Goldwater Specialty Hospital","Gracie Square Hospital","Harlem Hospital Center","Hospital for Special Surgery","Lenox Hill Hospital","Manhattan Eye, Ear and Throat Hospital","Manhattan Psychiatric Center","Memorial Sloan Kettering Cancer Center","Metropolitan Hospital Center","Mount Sinai Beth Israel","Mount Sinai Hospital","Mount Sinai St. Luke's","Mount Sinai West","NewYork\u2013Presbyterian - Allen Hospital","NewYork\u2013Presbyterian/Columbia University Medical Center","NewYork\u2013Presbyterian/Lower Manhattan Hospital","NewYork-Presbyterian/Weill Cornell Medical Center","New York Eye and Ear Infirmary of Mount Sinai","N.Y.U. Hospital for Joint Diseases","N.Y.U. Langone Medical Center","Rockefeller Institute Hospital","Bronx-Lebanon Hospital Center","Calvary Hospital","Jacobi Medical Center","Lincoln Medical Center","Montefiore Medical Center","Moses Division","Weiler Division","Wakefield Division","North Central Bronx Hospital","Brookdale University Hospital and Medical Center","Brooklyn Hospital Center","Coney Island Hospital","Interfaith Medical Center","Kingsbrook Jewish Medical Center","Kings County Hospital Center","Maimonides Medical Center","New York Methodist Hospital","NYU Lutheran Medical Center","University Hospital of Brooklyn","Woodhull Medical and Mental Health Center","Wyckoff Heights Medical Center","Creedmoor Psychiatric Center","Elmhurst Hospital Center","The Floating Hospital","Flushing Hospital Medical Center","Forest Hills Hospital","Jamaica Hospital","Long Island Jewish Medical Center","Mount Sinai Queens","NewYork\u2013Presbyterian/Queens","Queens Hospital Center","St. John's Episcopal Hospital South Shore","St. Mary's Children's Hospital","Zucker Hillside Hospital","Richmond University Medical Center","Staten Island University Hospital","Manhattan Veterans Administration Hospital","James J. Peters V.A. Medical Center","St. Barnabas Hospital","Brooklyn V.A. Medical Center","Mount Sinai Brooklyn","New York Community Hospital"]}},"id":"2b9ae0d8-72bf-4883-9af2-0f8d0a0023fb","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"2b9ae0d8-72bf-4883-9af2-0f8d0a0023fb","type":"ColumnDataSource"},"glyph":{"id":"4dde8e5d-1b20-4823-a90e-cbd46197fb93","type":"Circle"},"hover_glyph":null,"muted_glyph":null},"id":"c8160c5c-a4bf-4cb4-a26c-a720e252fa5a","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"b0843bf6-bb74-4446-a046-c2b87ce66f6f","type":"GMapPlot"}},"id":"a921ca14-d14e-4903-b785-811b0e0107ce","type":"PanTool"},{"attributes":{"lat":40.7,"lng":-73.92,"zoom":10},"id":"bd74f165-6ca7-4f06-9471-46eb986dd634","type":"GMapOptions"},{"attributes":{"callback":null},"id":"0530791d-5bfc-4bcb-bac2-5b848b71ac9d","type":"Range1d"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#cd5b1b"},"line_color":{"value":null},"size":{"units":"screen","value":14},"x":{"field":"longitude"},"y":{"field":"latitude"}},"id":"4dde8e5d-1b20-4823-a90e-cbd46197fb93","type":"Circle"},{"attributes":{"callback":null},"id":"128e048c-c59d-44b0-9df9-f0daf2e545b3","type":"Range1d"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"5b008a62-a3c9-4450-9c27-58c35c86005a","type":"HoverTool"},{"id":"a921ca14-d14e-4903-b785-811b0e0107ce","type":"PanTool"},{"id":"62a0cce3-1abe-4c50-856d-d7cad1361e96","type":"WheelZoomTool"}]},"id":"f1cbdf3d-8004-4623-a276-56c56273ad32","type":"Toolbar"},{"attributes":{"plot":{"id":"b0843bf6-bb74-4446-a046-c2b87ce66f6f","type":"GMapPlot"}},"id":"62a0cce3-1abe-4c50-856d-d7cad1361e96","type":"WheelZoomTool"},{"attributes":{},"id":"9c10c895-edc2-40bb-b54f-55fbcd8b194f","type":"ToolEvents"}],"root_ids":["b0843bf6-bb74-4446-a046-c2b87ce66f6f"]},"title":"Bokeh Application","version":"0.12.5"}};
+              var render_items = [{"docid":"805bed73-f4e6-4847-bccd-2db1853e844b","elementid":"f368adcc-c7ed-4cbb-a504-9918b2627e4d","modelid":"b0843bf6-bb74-4446-a046-c2b87ce66f6f"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>
