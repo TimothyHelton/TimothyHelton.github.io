@@ -68,21 +68,16 @@
 
                 <section class="col-1-4">
 
-                    <h2>June 1, 2017</h2>
+                    <h2>June 15, 2017</h2>
 
                     <ul class="ul-contents">
                         <li><a href="#Background">Background</a></li>
-                        <li><a href="#DataFiles">DataFiles</a></li>
-                        <li>
-                            <a href="#SourceCode">Jupyter Notebook</a>
-                        </li>
-                        <li><a href="#PythonVersion">Python Version</a></li>
-                        <li><a href="#Method">Method</a></li>
+                        <li><a href="#Strategy">Method</a></li>
                         <li><a href="#Demographics">Demographics</a></li>
-                        <li><a href="#Target Location">
-                            Target Location</a>
-                        </li>
-
+                        <li><a href="#Target Location">Target Location</a></li>
+                        <li><a href="#DataFiles">DataFiles</a></li>
+                        <li><a href="#SourceCode">Jupyter Notebook</a></li>
+                        <li><a href="#PythonVersion">Python Version</a></li>
                     </ul>
 
                 </section><!--
@@ -103,7 +98,7 @@
 
             </div>
 
-            <div class="col-1-1">
+            <p class="col-1-1">
                 <br>
 
                 <!-- Background -->
@@ -112,104 +107,339 @@
                 <h2>Background</h2>
 
                 <p>
-                    This project investigates the
-
-                    * talk about overview of project
+                    For this project we are going to place ourselves in the
+                    following scenario:
                 </p>
+
+                <p>
+                    A factious non-profit group called NYC Change,
+                    NYC<sup>2</sup>, has contacted our consulting firm to
+                    help them obtain signatures for a petition.
+                    With enough signatures, our client will get their issue
+                    on an upcoming ballot to let the power of the people
+                    weigh in on their cause.
+                    NYC<sup>2</sup> has a group of eager volunteers lined
+                    up to hit the streets and engage the throngs of
+                    <em>cheery</em> New Yorkers!
+                    Wanting to get the most out of their limited man power,
+                    our task is to identify locations and people groups in
+                    the city where the engaged citizens will have a
+                    predisposition to participate in the democratic process.
+                </p>
+
+                <p class="warning">
+                    <strong>The stakes are high here!</strong>
+                </p>
+
+                <p>
+                    If the volunteers fail to pull in enough signatures,
+                    we'll be out on the street corner.
+                    So with the stage set, let's get to it and help
+                    NYC<sup>2</sup> make a difference.
+                </p>
+
+                <p>
+                    If you would like to investigate any of the datasets
+                    used for this project check out the
+                    <a href="#DataFiles">data files</a> section below.
+                </p>
+
+                <p>
+                    Links to all the <a href="#SourceCode">source code</a>
+                    and the project's Notebook are also available.
+                </p>
+
+                <!-- Strategy -->
+
+                <a name="Strategy"></a>
+                <h2>Strategy</h2>
+
+                <p>
+                    To solve any problem you need a game plan, and the
+                    following steps are how we're going to determine a
+                    solution for NYC<sup>2</sup>.
+                </p>
+
+                <ol>
+                    <li>
+                        Identify people in New York City that have a
+                        high probability of wanting to sign a petition.
+                    </li>
+                    <li>
+                        Make an informed decision about locations in
+                        the city were our target audience will be found.
+                    </li>
+                    <li>
+                        Find subway stations near the target locations and
+                        analyze the turnstile data to determine times of day
+                        to deploy volunteers.
+                    </li>
+                </ol>
+
+                <p>
+                    Who would want to take time out of their busy day to
+                    listen for a minute or two and join a cause?
+                    I'm willing to bet that people that voted in the last
+                    election would.
+                </p>
+                <p>
+                    * Determine location where these people groups would be
+                    found.
+                    * Identify subway locations near target locations
+                    * Look at the subway turnstile data to find probable
+                    times when the target groups would be at the subway
+                    stations.
+                </p>
+
+                <!-- Demographics -->
+
+                <a name="Demographics"></a>
+                <h2>Demographics</h2>
+
+                <p>
+                    As a starting place, let's look at the voting demographics
+                    <a href="http://localhost:63342/TimothyHelton.github.io/assets/data/us_age_2016_voter.xls">
+                        dataset
+                    </a>supplied by the US Census Bureau.
+                    The plot below provides a break down of people in the
+                    country of reported to <strong>have voted</strong> in 2016.
+                </p>
+
+                <p>
+                    Statistics are also reported by the Census Bureau for
+                    people who reported to have not voted and those who
+                    chose to not disclose whether or not they voted.
+                    By focusing our attention on the group that chose to
+                    report they voted we are evaluating a known quantity and
+                    selecting a group that was proud to have voted.
+                    Both of these factors should contribute to acquiring
+                    more signatures on the petition.
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/us_voter_age.png"
+                     alt="US Voter Age Image">
+
+                <p>
+                    Here are a couple of key points to notice from the data:
+                </p>
+
+                <ul>
+                    <li>Half the people 37 years of age and older voted.</li>
+                    <li>
+                        Gender is fairly equal, but women tended to vote
+                        more than men.
+                    </li>
+                    <li>The age groups in the 70th percentile and higher
+                        for turnout were 45, 46, and 49 through 65.
+                    </li>
+                </ul>
+
+                <br>
+                <p>
+                    The Census Bureau also supplies an additional
+                    <a href="http://localhost:63342/TimothyHelton.github.io/assets/data/states_2016_voter.xls">
+                        dataset
+                    </a>based only on the voter turnout for New York State.
+                    The attributes of this dataset are more focused on
+                    people groups than age like the National data above.
+                </p>
+
+                <p>
+                    Since the total population for each group is supplied by
+                    normalizing the positive voters we should be able to
+                    give our volunteer a ranked order of whom to pursue.
+                </p>
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/ny_state_voter.png"
+                     alt="New York State Voter Image">
+
+                <p>
+                    The key points from this dataset are the following:
+                </p>
+
+                <ul>
+                    <li>The state data confirms our initial findings that
+                        women vote slightly more than men.
+                    </li>
+                    <li>On first glance one might think ok target groups
+                        in the following order; White, Black, Hispanic,
+                        and then Asian.
+                        But, after the uncertainty of the collected data is
+                        taken into account the is a near tie at the top
+                        between Black and White voter.
+                    </li>
+                </ul>
+
+                <br>
+                <h5>Findings</h5>
+                <p>
+                    After analyzing the 2016 voter turnout statistics we can
+                    now define target groups for the volunteers to engage.
+                </p>
+
+                <p>
+                    <strong>
+                        Remember that the only features that make the
+                        target groups more desirable is the increased
+                        probability of having voted in the past.
+                    </strong>
+                </p>
+
+                    <ul>
+                        <li>Give preference to women over men.</li>
+                        <li>Look for people in the age range of 45-65.</li>
+                        <li>
+                            Approach people groups in the following order:
+                            <ol>
+                                <li>Black or White</li>
+                                <li>Hispanic</li>
+                                <li>Asian</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                <!-- Target Locations -->
+
+                <a name="Target Locations"></a>
+                <h2>Target Location</h2>
+
+                <p>
+                    * Hospital scraping
+                </p>
+
+                <div class="grid">
+
+                    <section class="col-1-2">
+
+                        <iframe
+                                src="assets/html/nyc_signatures/hospitals.html"
+                                class="nyc-bokeh">
+                        </iframe>
+
+                    </section>
+
+                </div>
+
+                <h3>Subway Turnstile Data</h3>
+
+                <div class="grid">
+
+                    <section class="col-1-2">
+
+                        <iframe
+                                src="assets/html/nyc_signatures/stations.html"
+                                class="nyc-bokeh">
+                        </iframe>
+
+                    </section><!--
+
+                    -->
+                    <section class="col-1-2">
+
+                        <iframe
+                                src="assets/html/nyc_signatures/stations_locations.html"
+                                class="nyc-bokeh">
+                        </iframe>
+
+                    </section>
+
+                </div>
 
                 <!-- Data Files -->
 
                 <a name="DataFiles"></a>
                 <h2>Data Files</h2>
-                
+
                 <p>The following data files were used in the project.</p>
 
                 <table class="schema">
 
                     <thead>
 
-                        <tr class="bb">
-                            <th>Data File</th>
-                            <th>Original Source</th>
-                        </tr>
+                    <tr class="bb">
+                        <th>Data File</th>
+                        <th>Original Source</th>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <h6>
-                                     <a href="assets/data/nyc_hospitals.csv">
-                                        New York City Hospitals
-                                    </a>
-                                </h6>
-                            </td>
-                            <td>
-                                <h6>
-                                     <a href="https://en.wikipedia.org/wiki/List_of_hospitals_in_New_York_City">
-                                        Wikipedia
-                                    </a>
-                                        NYC Hospital Names And Locations
-                                </h6>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <h6>
+                                <a href="assets/data/nyc_hospitals.csv">
+                                    New York City Hospitals
+                                </a>
+                            </h6>
+                        </td>
+                        <td>
+                            <h6>
+                                <a href="https://en.wikipedia.org/wiki/List_of_hospitals_in_New_York_City">
+                                    Wikipedia
+                                </a>
+                                NYC Hospital Names And Locations
+                            </h6>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <h6>
-                                    <a href="assets/data/nyc_subway_locations.csv">
-                                        New York State Subway Stations
-                                    </a>
-                                </h6>
-                            </td>
-                            <td>
-                                <h6>
-                                    <a href="https://catalog.data.gov/dataset/nyc-transit-subway-entrance-and-exit-data">
-                                        DATA.GOV
-                                    </a>
-                                </h6>
-                                 <div class="col-1-1">
-                                     NYC Transit Subway Entrance And Exit Data
-                                 </div>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <h6>
+                                <a href="assets/data/nyc_subway_locations.csv">
+                                    New York State Subway Stations
+                                </a>
+                            </h6>
+                        </td>
+                        <td>
+                            <h6>
+                                <a href="https://catalog.data.gov/dataset/nyc-transit-subway-entrance-and-exit-data">
+                                    DATA.GOV
+                                </a>
+                            </h6>
+                            <div class="col-1-1">
+                                NYC Transit Subway Entrance And Exit Data
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <h6>
-                                    <a href="assets/data/states_2016_voter.xls">
-                                        2016 State Voter Data
-                                    </a>
-                                </h6>
-                            </td>
-                            <td>
-                                <h6>
-                                    <a href="https://www2.census.gov/programs-surveys/cps/tables/p20/580/table04b.xls">
-                                        United States Census Bureau
-                                    </a>
-                                </h6>
-                                 <div class="col-1-1">
-                                     2016 Voter Data Table 4b
-                                 </div>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <h6>
+                                <a href="assets/data/states_2016_voter.xls">
+                                    2016 State Voter Data
+                                </a>
+                            </h6>
+                        </td>
+                        <td>
+                            <h6>
+                                <a href="https://www2.census.gov/programs-surveys/cps/tables/p20/580/table04b.xls">
+                                    United States Census Bureau
+                                </a>
+                            </h6>
+                            <div class="col-1-1">
+                                2016 Voter Data Table 4b
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <h6>
-                                    <a href="assets/data/us_age_2016_voter.xls">
-                                        2016 United States Voter Data
-                                    </a>
-                                </h6>
-                            </td>
-                            <td>
-                                <h6>
-                                    <a href="https://www2.census.gov/programs-surveys/cps/tables/p20/580/table01.xls">
-                                        United States Census Bureau
-                                    </a>
-                                </h6>
-                                <div class="col-1-1">
-                                    2016 Voter Data Table 1
-                                </div>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <h6>
+                                <a href="assets/data/us_age_2016_voter.xls">
+                                    2016 United States Voter Data
+                                </a>
+                            </h6>
+                        </td>
+                        <td>
+                            <h6>
+                                <a href="https://www2.census.gov/programs-surveys/cps/tables/p20/580/table01.xls">
+                                    United States Census Bureau
+                                </a>
+                            </h6>
+                            <div class="col-1-1">
+                                2016 Voter Data Table 1
+                            </div>
+                        </td>
+                    </tr>
 
                     </thead>
 
@@ -236,6 +466,18 @@
                     Follow this link to view the project's modules.
                 </p>
 
+                <p>
+                    <strong>Note</strong>:
+                    <br>
+                    To create the geographic plots a
+                    <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">
+                        Google API Key
+                    </a> is required.
+                    The key is easy to obtain, but make sure to not share your
+                    key.
+                    For more details check out Google's site.
+                </p>
+
                 <!-- Python Version -->
 
                 <a name="PythonVersion"></a>
@@ -249,92 +491,7 @@
                     distribution of Python 3.6.1.
                 </p>
 
-                <!-- Method -->
-
-                <a name="Method"></a>
-                <h2>Method</h2>
-
-                <p>
-                    * Look at 2016 US voter stats
-                    * Look at 2016 US voter stats
-                    * Identify age of people likely to have voted in 2016
-                    * Identify gender likely to have voted in 2016
-                    * Identify people groups likely to have voted in 2016
-                    * Pick a target age group
-                    * Rank people groups
-                    * Determine location where these people groups would be
-                    found.
-                    * Identify subway locations near target locations
-                    * Look at the subway turnstile data to find probable
-                    times when the target groups would be at the subway
-                    stations.
-                </p>
-
-                <!-- Demographics -->
-
-                <a name="Demographics"></a>
-                <h2>Demographics</h2>
-
-                <p>
-                    * US Voter
-                    * NY State Voter
-                </p>
-
-                    <img class="center-img"
-                     src="assets/images/nyc_signatures/us_voter_age.png"
-                     alt="US Voter Age Image">
-
-                    <img class="center-img"
-                     src="assets/images/nyc_signatures/ny_state_voter.png"
-                     alt="New York State Voter Image">
-
-                <!-- Target Locations -->
-
-                <a name="Target Locations"></a>
-                <h2>Target Location</h2>
-
-                <p>
-                    * Hospital scraping
-                </p>
-
-                <div class="grid">
-
-                    <section class="col-1-2">
-
-                        <iframe
-                            src="assets/html/nyc_signatures/hospitals.html"
-                            class="nyc-bokeh">
-                        </iframe>
-
-                    </section>
-
-                </div>
-
-                <h3>Subway Turnstile Data</h3>
-
-                <div class="grid">
-
-                    <section class="col-1-2">
-
-                        <iframe
-                            src="assets/html/nyc_signatures/stations.html"
-                            class="nyc-bokeh">
-                        </iframe>
-
-                    </section><!--
-
-                    --><section class="col-1-2">
-
-                        <iframe
-                            src="assets/html/nyc_signatures/stations_locations.html"
-                            class="nyc-bokeh">
-                        </iframe>
-
-                    </section>
-
-                </div>
-
-            </div>
+                </p></p></p></div>
 
         </section>
 
