@@ -74,7 +74,7 @@
                         <li><a href="#Background">Background</a></li>
                         <li><a href="#Strategy">Method</a></li>
                         <li><a href="#Demographics">Demographics</a></li>
-                        <li><a href="#Target Location">Target Location</a></li>
+                        <li><a href="#TargetLocations">Target Location</a></li>
                         <li><a href="#DataFiles">DataFiles</a></li>
                         <li><a href="#SourceCode">Jupyter Notebook</a></li>
                         <li><a href="#PythonVersion">Python Version</a></li>
@@ -98,7 +98,7 @@
 
             </div>
 
-            <p class="col-1-1">
+            <div class="col-1-1">
                 <br>
 
                 <!-- Background -->
@@ -140,7 +140,7 @@
 
                 <p>
                     If you would like to investigate any of the datasets
-                    used for this project check out the
+                    used for this project, check out the
                     <a href="#DataFiles">data files</a> section below.
                 </p>
 
@@ -155,9 +155,9 @@
                 <h2>Strategy</h2>
 
                 <p>
-                    To solve any problem you need a game plan, and the
+                    To solve any problem, you need a game plan, and the
                     following steps are how we're going to determine a
-                    solution for NYC<sup>2</sup>.
+                    solution for NYC<sup>2</sup>:
                 </p>
 
                 <ol>
@@ -167,12 +167,12 @@
                     </li>
                     <li>
                         Make an informed decision about locations in
-                        the city were our target audience will be found.
+                        the city where our target audience will be found.
                     </li>
                     <li>
                         Find subway stations near the target locations and
-                        analyze the turnstile data to determine times of day
-                        to deploy volunteers.
+                        analyze the passenger turnstile data to determine
+                        times of day to deploy volunteers.
                     </li>
                 </ol>
 
@@ -181,14 +181,6 @@
                     listen for a minute or two and join a cause?
                     I'm willing to bet that people that voted in the last
                     election would.
-                </p>
-                <p>
-                    * Determine location where these people groups would be
-                    found.
-                    * Identify subway locations near target locations
-                    * Look at the subway turnstile data to find probable
-                    times when the target groups would be at the subway
-                    stations.
                 </p>
 
                 <!-- Demographics -->
@@ -201,16 +193,16 @@
                     <a href="http://localhost:63342/TimothyHelton.github.io/assets/data/us_age_2016_voter.xls">
                         dataset
                     </a>supplied by the US Census Bureau.
-                    The plot below provides a break down of people in the
-                    country of reported to <strong>have voted</strong> in 2016.
+                    The plot below provides a breakdown of people in the
+                    country reported to <strong>have voted</strong> in 2016.
                 </p>
 
                 <p>
-                    Statistics are also reported by the Census Bureau for
-                    people who reported to have not voted and those who
-                    chose to not disclose whether or not they voted.
+                    Statistics are also presented by the Census Bureau for
+                    people who stated they did not vote, and those who
+                    chose to not disclose whether they voted.
                     By focusing our attention on the group that chose to
-                    report they voted we are evaluating a known quantity and
+                    report they voted, we are evaluating a known quantity and
                     selecting a group that was proud to have voted.
                     Both of these factors should contribute to acquiring
                     more signatures on the petition.
@@ -247,7 +239,7 @@
 
                 <p>
                     Since the total population for each group is supplied by
-                    normalizing the positive voters we should be able to
+                    normalizing the positive voters, we should be able to
                     give our volunteer a ranked order of whom to pursue.
                 </p>
 
@@ -263,19 +255,19 @@
                     <li>The state data confirms our initial findings that
                         women vote slightly more than men.
                     </li>
-                    <li>On first glance one might think ok target groups
-                        in the following order; White, Black, Hispanic,
+                    <li>On first glance one might think to prioritize target
+                        groups in the following order; White, Black, Hispanic,
                         and then Asian.
                         But, after the uncertainty of the collected data is
-                        taken into account the is a near tie at the top
-                        between Black and White voter.
+                        taken into account, there is a near tie at the top
+                        between Black and White voters.
                     </li>
                 </ul>
 
                 <br>
                 <h5>Findings</h5>
                 <p>
-                    After analyzing the 2016 voter turnout statistics we can
+                    After analyzing the 2016 voter turnout statistics, we can
                     now define target groups for the volunteers to engage.
                 </p>
 
@@ -302,11 +294,38 @@
 
                 <!-- Target Locations -->
 
-                <a name="Target Locations"></a>
-                <h2>Target Location</h2>
+                <a name="TargetLocations"></a>
+                <h2>Target Locations</h2>
 
                 <p>
-                    * Hospital scraping
+                    For the decade of my twenties I probably went to a hospital
+                    only a handful of occasions.
+                    Now that I'm older and wiser, I go quite often, and you
+                    know who else is there?
+                    <strong>
+                        Patients in the exact age demographic that we are
+                        targeting.
+                    </strong>
+                </p>
+
+                <p>
+                    To find the hospitals in New York City, I scraped names
+                    from
+                    <a href="https://en.wikipedia.org/wiki/List_of_hospitals_in_New_York_City">
+                        this
+                    </a> Wikipedia site.
+                    After employing some modern day hieroglyphics, also
+                    known as regular expressions, I had a list of all the
+                    current hospital names.
+                    Then I used the Python package
+                    <a href="https://github.com/DenisCarriere/geocoder">
+                        geocoder
+                    </a> to obtain the Latitude and Longitude values of the
+                    hospitals.
+                    The interactive graphic below displays all the hospitals
+                    I found in the city, demarcated with crimson circles.
+                    If you hover over a specific location, the name of the
+                    hospital will be displayed as a tool tip.
                 </p>
 
                 <div class="grid">
@@ -322,7 +341,7 @@
 
                 </div>
 
-                <h3>Subway Turnstile Data</h3>
+                <h3>Subway Station Data</h3>
 
                 <div class="grid">
 
@@ -335,8 +354,7 @@
 
                     </section><!--
 
-                    -->
-                    <section class="col-1-2">
+                    --><section class="col-1-2">
 
                         <iframe
                                 src="assets/html/nyc_signatures/stations_locations.html"
@@ -346,6 +364,8 @@
                     </section>
 
                 </div>
+
+                <h3>Subway Turnstile Data</h3>
 
                 <!-- Data Files -->
 
@@ -376,8 +396,10 @@
                                 <a href="https://en.wikipedia.org/wiki/List_of_hospitals_in_New_York_City">
                                     Wikipedia
                                 </a>
-                                NYC Hospital Names And Locations
                             </h6>
+                            <div class="col-1-1">
+                                NYC Hospital Names And Locations
+                            </div>
                         </td>
                     </tr>
 
@@ -491,7 +513,7 @@
                     distribution of Python 3.6.1.
                 </p>
 
-                </p></p></p></div>
+            </div>
 
         </section>
 
