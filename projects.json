@@ -12,18 +12,18 @@
           "url": "nyc_signature.html"
         },
         {
-          "name": "NumPy",
-          "type": "python",
-          "url": "nyc_signature.html"
-        },
-        {
-          "name": "Pandas",
+          "name": "pandas",
           "type": "python",
           "url": "nyc_signature.html"
         },
         {
           "name": "Jupyter Notebook",
           "type": "python",
+          "url": "nyc_signature.html"
+        },
+        {
+          "name": "Bokeh",
+          "type": "visualization",
           "url": "nyc_signature.html"
         },
         {
@@ -43,7 +43,12 @@
       "type": "project",
       "children": [
         {
-          "name": "Python",
+          "name": "NumPy",
+          "type": "python",
+          "url": "pandas_best_practices.html"
+        },
+        {
+          "name": "pandas",
           "type": "python",
           "url": "pandas_best_practices.html"
         }
