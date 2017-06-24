@@ -68,13 +68,14 @@
 
                 <section class="col-1-4">
 
-                    <h2>In Work</h2>
+                    <h2>June 24, 2017</h2>
 
                     <ul class="ul-contents">
                         <li><a href="#Background">Background</a></li>
                         <li><a href="#Strategy">Method</a></li>
                         <li><a href="#Demographics">Demographics</a></li>
                         <li><a href="#TargetLocations">Target Location</a></li>
+                        <li><a href="#Conclusion">Conclusion</a></li>
                         <li><a href="#DataFiles">DataFiles</a></li>
                         <li><a href="#SourceCode">Jupyter Notebook</a></li>
                         <li><a href="#PythonVersion">Python Version</a></li>
@@ -112,15 +113,15 @@
                 </p>
 
                 <p>
-                    A factious non-profit group called NYC Change,
-                    NYC<sup>2</sup>, has contacted our consulting firm to
+                    A factious non-profit group called NYC Change
+                    (NYC<sup>2</sup>), has contacted our consulting firm to
                     help them obtain signatures for a petition.
                     With enough signatures, our client will get their issue
                     on an upcoming ballot to let the power of the people
                     weigh in on their cause.
                     NYC<sup>2</sup> has a group of eager volunteers lined
                     up to hit the streets and engage the throngs of
-                    <em>cheery</em> New Yorkers!
+                    cheery New Yorkers!
                     Wanting to get the most out of their limited man power,
                     our task is to identify locations and people groups in
                     the city where the engaged citizens will have a
@@ -133,7 +134,7 @@
 
                 <p>
                     If the volunteers fail to pull in enough signatures,
-                    we'll be out on the street corner.
+                    <em>we'll</em> be out on the street corner.
                     So with the stage set, let's get to it and help
                     NYC<sup>2</sup> make a difference.
                 </p>
@@ -217,13 +218,18 @@
                 </p>
 
                 <ul>
-                    <li>Half the people 37 years of age and older voted.</li>
+                    <li>
+                        Half the people 37 years of age and older voted, and
+                        are marked as the "Target Group" above.
+                    </li>
                     <li>
                         Gender is fairly equal, but women tended to vote
                         more than men.
                     </li>
-                    <li>The age groups in the 70th percentile and higher
-                        for turnout were 45, 46, and 49 through 65.
+                    <li>
+                        The age groups in the 70th percentile and higher
+                        for turnout were 45, 46, and 49 through 65 as
+                        denoted again with the "Target Group" label.
                     </li>
                 </ul>
 
@@ -326,6 +332,8 @@
                     I found in the city, demarcated with crimson circles.
                     If you hover over a specific location, the name of the
                     hospital will be displayed as a tool tip.
+                    To investigate the surrounding area of a hospital
+                    activate the zoom tool on the left.
                 </p>
 
                 <div class="grid">
@@ -347,7 +355,8 @@
                 <p>
                     The next two maps show subway locations marked with blue
                     diamonds and hospitals shown in crimson circles.
-
+                    Now we're starting to hone in on ideal canvasing
+                    sites.
                 </p>
 
                 <div class="grid">
@@ -397,6 +406,270 @@
                 <br>
                 <h3>Subway Turnstile Data</h3>
 
+                <p>
+                    The
+                    <a href="http://www.mta.info/">
+                        Metropolitan Transportation Authority (MTA)
+                    </a>
+                    provides subway turnstile usage on a weekly basis
+                    <a href="http://web.mta.info/developers/turnstile.html">
+                        here
+                    </a>.
+                    While interacting with these data files I found the most
+                    recent week's content could have partial entries.
+                    I'm sure it's convenient for the majority of users
+                    interested in the subway statistics to have this instant
+                    incremental supply of updates, but for our situation the
+                    empty future values skew the results.
+                    The default time period I choose to evaluate was the first
+                    full week of available data and the following four weeks
+                    after.
+                    If you chose to run the supplied code be aware that the
+                    time period will be different, but by supplying the
+                    dates of <strong>2017-05-13</strong> to
+                    <strong>2017-06-10</strong> you will be able to recreate
+                    the same results shown here.
+                </p>
+
+                <p>
+                    After analyzing the turnstile entrance values for the
+                    target locations, it is clear there are three main subway
+                    stations that receive a larger majority of passengers.
+                    In an attempt to refine our deployment of volunteers in an
+                    automated fashion I chose to select the minimum number
+                    of stations that would comprise up to 90% of the
+                    total station entrance values to be our top sites of
+                    interest.
+                    We'll focus our efforts on the following stations.
+                </p>
+
+                <ol>
+                    <li>Fulton Street</li>
+                    <li>Dekalb Avenue</li>
+                    <li>7<sup>th</sup> Avenue</li>
+                </ol>
+
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/turnstile_target_stations.png"
+                     alt="NYC Turnstile Target Stations">
+
+                <br>
+                <p>
+                    Would a particular day of the week provide larger
+                    volumes of people for us to engage?
+                    As it turns out for this scenario, the trains that come
+                    to these stations are packed... all the time.
+                    This means that any day we chose will be a great day.
+                </p>
+
+                <p>
+                    I checked, re-checked and re-double checked the values
+                    and the scale of <em>billions</em> for following plot
+                    is correct.
+                    The shear number of people that ride the subway in New
+                    York City is pretty astounding!
+                </p>
+
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/turnstile_daily_totals.png"
+                     alt="NYC Turnstile Daily Totals">
+
+                <br>
+                <p>
+                    Remember we are looking for our target sample of people
+                    who had a medical appointment at the hospital near our
+                    subway station.
+                    The turnstile exit values represent people on their way
+                    to an appointment.
+                    They could be running late or worried about the outcome
+                    of their visit.
+                    Being perpetual optimists we are going to wish them the
+                    best of luck, which will no doubt, result in all their
+                    medical ailments being curred.
+                    Now... they have made it to the hospital, completed
+                    their business there, and are heading back to the subway
+                    to get on with their day.
+                    What time is it?
+                    Time to get some signatures.
+                </p>
+
+                <p>
+                    The average turnstile values broken down by day of the
+                    week for each station are show in the following graphics.
+                    I chose a window of 9:00am to 5:00pm thinking this would
+                    encapsulate the bulk of hospital patrons returning to
+                    the subway.
+                    Each station yielded a different optimum time as shown
+                    in the table below.
+                    A 30 minute pad was added to the train departure times
+                    to give the volunteers time to work the crowd.
+                </p>
+
+                <br>
+                <h5>Findings</h5>
+
+                <table class="schema">
+                    <thead>
+
+                    <tr class="bb">
+                        <th>NYC Subway Station</th>
+                        <th>Day of the Week</th>
+                        <th>Target Time of Day</th>
+                    </tr>
+
+                    <tr>
+                        <td>Fulton Street</td>
+                        <td>Monday - Friday</td>
+                        <td>10:30am - 3:00pm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dekalb Avenue</td>
+                        <td>Monday - Friday</td>
+                        <td>11:30am - 4:00pm</td>
+                    </tr>
+
+                    <tr>
+                        <td>7<sup>th</sup> Avenue</td>
+                        <td>Monday - Friday</td>
+                        <td>08:30am - 5:00pm</td>
+                    </tr>
+
+                    </thead>
+
+                </table>
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/turnstile_daily_fulton.png"
+                     alt="NYC Turnstile Daily Fulton Average">
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/turnstile_daily_dekalb.png"
+                     alt="NYC Turnstile Daily Dekalb Average">
+
+                <img class="center-img"
+                     src="assets/images/nyc_signatures/turnstile_daily_7av.png"
+                     alt="NYC Turnstile Daily 7 Average">
+
+                <!-- Conclusion -->
+
+                <a name="Conclusion"></a>
+                <h2>Conclusion</h2>
+
+                <p>
+                    We set out to help a company NYC Change (NYC<sup>2</sup>),
+                    determine where to send volunteers in New York City to
+                    acquire signatures for a petition.
+                </p>
+
+                <ul>
+                    <li>
+                        Evaluating voting demographics from the 2016 US
+                        election established a target age, gender and ranking
+                        of people groups most likely to participate in
+                        democracy.
+                    </li>
+                    <li>
+                        Then a hypothesis was posed that our audience would
+                        frequent hospitals for routine medical checkups, and
+                        use the public transit system to get there.
+                    </li>
+                    <li>
+                        Cross referencing the geographic locations of subway
+                        stations to hospitals in New York City produced a list
+                        of ten prospect sites to deploy NYC<sup>2</sup>
+                        volunteers.
+                    </li>
+                </ul>
+
+                <br>
+                <p>
+                    The results of our study are the following.
+                </p>
+
+                <div class="grid">
+
+                    <section class="col-450">
+
+                        <iframe
+                                src="assets/html/nyc_signatures/target_stations.html"
+                                class="nyc-bokeh">
+                        </iframe>
+
+                    </section><!--
+
+                    --><section class="col-450">
+
+                        <h3>Demographics</h3>
+                        <ul>
+                            <li>
+                                Give preference to <strong>WOMEN</strong> over
+                                men.
+                            </li>
+                            <li>
+                                Target people in the age range of
+                                <strong>45 - 65</strong>.
+                            </li>
+                            <li>
+                                Approach people groups in the following order:
+                                <ol>
+                                    <li>
+                                        <strong>BLACK</strong> or
+                                        <strong>WHITE</strong>
+                                    </li>
+                                    <li>Hispanic</li>
+                                    <li>Asian</li>
+                                </ol>
+                            </li>
+                        </ul>
+
+                        <h3>Subway Stations</h3>
+                        <table class="schema">
+                            <thead>
+
+                            <tr class="bb">
+                                <th>NYC Subway Station</th>
+                                <th>Day of the Week</th>
+                                <th>Target Time of Day</th>
+                            </tr>
+
+                            <tr>
+                                <td>Fulton Street</td>
+                                <td>Monday - Friday</td>
+                                <td>10:30am - 3:00pm</td>
+                            </tr>
+
+                            <tr>
+                                <td>Dekalb Avenue</td>
+                                <td>Monday - Friday</td>
+                                <td>11:30am - 4:00pm</td>
+                            </tr>
+
+                            <tr>
+                                <td>7<sup>th</sup> Avenue</td>
+                                <td>Monday - Friday</td>
+                                <td>08:30am - 5:00pm</td>
+                            </tr>
+
+                            </thead>
+
+                        </table>
+
+                    </section>
+
+                </div>
+
+                <br>
+                <p>
+                    I learned a number of new techniques on this project.
+                    The most interesting of which was the potential to combine
+                    seemingly unrelated genres of information into a
+                    meaningful insightful composite.
+                    Thanks for reading this article.
+                </p>
+
                 <!-- Data Files -->
 
                 <a name="DataFiles"></a>
@@ -411,6 +684,26 @@
                     <tr class="bb">
                         <th>Data File</th>
                         <th>Original Source</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h6>
+                                <a href="http://web.mta.info/developers/turnstile.html">
+                                    Metropolitan Transportation Authority (MTA)
+                                </a>
+                            </h6>
+                        </td>
+                        <td>
+                            <h6>
+                                <a href="http://web.mta.info/developers/turnstile.html">
+                                    MTA Website
+                                </a>
+                            </h6>
+                            <div class="col-1-1">
+                                Subway Turnstile Usage
+                            </div>
+                        </td>
                     </tr>
 
                     <tr>

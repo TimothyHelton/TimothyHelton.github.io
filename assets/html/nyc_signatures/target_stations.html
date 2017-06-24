@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="76635bca-20dd-4953-acd7-a1a598e7f95a"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"f869f826-8a6c-4906-a502-2ede83190c46":{"roots":{"references":[{"attributes":{"plot":null,"text":"New York City Hospitals and Subway Stations of Interest"},"id":"3bd13f17-4b81-4ea6-a762-4defed7b18e0","type":"Title"},{"attributes":{"callback":null,"column_names":["name","latitude","longitude","index"],"data":{"index":[16,38,42],"latitude":{"__ndarray__":"dnqUAOtaRECMbhhgelVEQM7/q44cWkRA","dtype":"float64","shape":[3]},"longitude":{"__ndarray__":"dvusMlOAUsBvuDQjqH5SwEEN38K6elLA","dtype":"float64","shape":[3]},"name":["NewYork\u2013Presbyterian/Lower Manhattan Hospital","New York Methodist Hospital","Wyckoff Heights Medical Center"]}},"id":"cdc2176c-2391-4b5d-83aa-e0fd43f4257b","type":"ColumnDataSource"},{"attributes":{"callback":null},"id":"eae738d5-d2dd-4529-b844-b10f48917e17","type":"Range1d"},{"attributes":{"lat":40.7,"lng":-73.92,"zoom":10},"id":"84d79531-bb83-48e1-8d36-87df35564ba0","type":"GMapOptions"},{"attributes":{"fill_color":{"value":"#3062C8"},"line_color":{"value":null},"size":{"units":"screen","value":10},"x":{"field":"longitude"},"y":{"field":"latitude"}},"id":"0c389f24-d7d4-48de-9a2f-542e3b028939","type":"Diamond"},{"attributes":{},"id":"d77edf4e-03a3-415d-baa4-1bc4a19187f5","type":"ToolEvents"},{"attributes":{"callback":null,"plot":{"id":"ecb3ea6d-f773-4718-aa0a-397dccd4da4d","type":"GMapPlot"},"tooltips":[["Location","@name"]]},"id":"8b404430-938c-4204-bed6-cb3b3ffd1f72","type":"HoverTool"},{"attributes":{"plot":{"id":"ecb3ea6d-f773-4718-aa0a-397dccd4da4d","type":"GMapPlot"}},"id":"92d0357d-c309-4046-82d8-9877c15e2e33","type":"PanTool"},{"attributes":{"callback":null},"id":"2b2deaed-c830-4233-9a01-95644600c425","type":"Range1d"},{"attributes":{"plot":{"id":"ecb3ea6d-f773-4718-aa0a-397dccd4da4d","type":"GMapPlot"}},"id":"277c7073-32fe-4cb4-a164-463c04818660","type":"WheelZoomTool"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#cd5b1b"},"line_color":{"value":null},"size":{"units":"screen","value":14},"x":{"field":"longitude"},"y":{"field":"latitude"}},"id":"be07da79-a413-495d-b30d-240e255813ff","type":"Circle"},{"attributes":{"data_source":{"id":"ae54de17-976c-4857-bd02-06294ca56ad3","type":"ColumnDataSource"},"glyph":{"id":"0c389f24-d7d4-48de-9a2f-542e3b028939","type":"Diamond"},"hover_glyph":null,"muted_glyph":null},"id":"2be6fab4-9842-4137-a9e2-58f639eae0d5","type":"GlyphRenderer"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"8b404430-938c-4204-bed6-cb3b3ffd1f72","type":"HoverTool"},{"id":"92d0357d-c309-4046-82d8-9877c15e2e33","type":"PanTool"},{"id":"277c7073-32fe-4cb4-a164-463c04818660","type":"WheelZoomTool"}]},"id":"85d60b1c-8ddc-4586-8d35-10eda51199d2","type":"Toolbar"},{"attributes":{"data_source":{"id":"cdc2176c-2391-4b5d-83aa-e0fd43f4257b","type":"ColumnDataSource"},"glyph":{"id":"be07da79-a413-495d-b30d-240e255813ff","type":"Circle"},"hover_glyph":null,"muted_glyph":null},"id":"dec52fd2-d74f-4cc6-b45c-756c6b29f210","type":"GlyphRenderer"},{"attributes":{"api_key":"AIzaSyBbHu5HrfPK7i7G3ze_D_VKB9ZB1HBD9nk","map_options":{"id":"84d79531-bb83-48e1-8d36-87df35564ba0","type":"GMapOptions"},"plot_width":400,"renderers":[{"id":"dec52fd2-d74f-4cc6-b45c-756c6b29f210","type":"GlyphRenderer"},{"id":"2be6fab4-9842-4137-a9e2-58f639eae0d5","type":"GlyphRenderer"}],"title":{"id":"3bd13f17-4b81-4ea6-a762-4defed7b18e0","type":"Title"},"tool_events":{"id":"d77edf4e-03a3-415d-baa4-1bc4a19187f5","type":"ToolEvents"},"toolbar":{"id":"85d60b1c-8ddc-4586-8d35-10eda51199d2","type":"Toolbar"},"x_range":{"id":"2b2deaed-c830-4233-9a01-95644600c425","type":"Range1d"},"y_range":{"id":"eae738d5-d2dd-4529-b844-b10f48917e17","type":"Range1d"}},"id":"ecb3ea6d-f773-4718-aa0a-397dccd4da4d","type":"GMapPlot"},{"attributes":{"callback":null,"column_names":["name","latitude","longitude","index"],"data":{"index":[0,6,9],"latitude":{"__ndarray__":"VMiVehZaREArobskzlpEQPmiPV5IVURA","dtype":"float64","shape":[3]},"longitude":{"__ndarray__":"C7Wmecd6UsCHhsWoa4BSwL3GLlG9flLA","dtype":"float64","shape":[3]},"name":["DeKalb Av","Fulton St","7th Av"]}},"id":"ae54de17-976c-4857-bd02-06294ca56ad3","type":"ColumnDataSource"}],"root_ids":["ecb3ea6d-f773-4718-aa0a-397dccd4da4d"]},"title":"Bokeh Application","version":"0.12.5"}};
+              var render_items = [{"docid":"f869f826-8a6c-4906-a502-2ede83190c46","elementid":"76635bca-20dd-4953-acd7-a1a598e7f95a","modelid":"ecb3ea6d-f773-4718-aa0a-397dccd4da4d"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>
