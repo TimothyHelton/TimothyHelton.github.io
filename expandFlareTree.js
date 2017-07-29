@@ -31,7 +31,7 @@ function fileColors(d) {
     if(d.type === "database") return "#787f51";
     if(d.type === "documentation") return "#824937";
     if(d.type === "project") return "#000000";
-    if(d.type === "python") return "#cd5b1b";
+    if(d.type === "code") return "#cd5b1b";
     if(d.type === "root") return "#314d26";
     if(d.type === "visualization") return "#c19408";
     if(d.type === "web_scraping") return "#c8bd92";

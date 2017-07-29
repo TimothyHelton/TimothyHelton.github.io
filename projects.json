@@ -13,12 +13,12 @@
         },
         {
           "name": "pandas",
-          "type": "python",
+          "type": "code",
           "url": "nyc_signature.html"
         },
         {
           "name": "Jupyter Notebook",
-          "type": "python",
+          "type": "code",
           "url": "nyc_signature.html"
         },
         {
@@ -44,12 +44,12 @@
       "children": [
         {
           "name": "NumPy",
-          "type": "python",
+          "type": "code",
           "url": "pandas_best_practices.html"
         },
         {
           "name": "pandas",
-          "type": "python",
+          "type": "code",
           "url": "pandas_best_practices.html"
         }
       ]
@@ -60,7 +60,7 @@
       "children": [
         {
           "name": "Bash",
-          "type": "python",
+          "type": "code",
           "url": "pyproject_generator.html"
         }
       ]
@@ -70,7 +70,7 @@
       "children": [
         {
           "name": "Python",
-          "type": "python",
+          "type": "code",
           "url": "strumenti.html"
         },
         {
@@ -94,7 +94,7 @@
         },
         {
           "name": "Python",
-          "type": "python"
+          "type": "code"
         },
         {
           "name": "Visualization",
