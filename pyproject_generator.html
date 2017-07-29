@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Timothy Helton</title>
+
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Timothy Helton's Projects"/>
+
+        <link rel="stylesheet" type="text/css"
+              href="assets/stylesheets/main.css">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+
+        <header class="primary-header container group">
+
+            <h1 class="logo">
+                <a href="index.html">Timothy Helton</a>
+            </h1>
+
+            <h3 class="tagline">Learn Something New Every Day</h3>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li><a href="blog.html">Blog</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Hero -->
+
+        <section class="row-alt">
+
+            <div class="hero container">
+
+                <h2>pypackage_generator</h2>
+
+            </div>
+
+        </section>
+
+         <!-- Teaser -->
+
+        <section class="row">
+
+            <div class="grid">
+
+                <section class="col-1-4">
+
+                    <ul class="ul-contents">
+                        <li><a href="#Background">Background</a></li>
+                        <li><a href="#Installation">Installation</a></li>
+                        <li><a href="#QuickStart">Quick Start Guide</a></li>
+                    </ul>
+
+                </section><!--
+
+                Content
+
+                --><section class="col-2-3">
+
+                    <h1>
+                        Python Project Generator
+                    </h1>
+
+                    <h3>
+                        <em>
+                            "The first rule of any technology used in a
+                            business is that automation applied to an efficient
+                            operation will magnify the efficiency.
+                            The second is that automation applied to an
+                            inefficient operation will magnify the
+                            inefficiency."
+                        </em>
+                        <p><strong>~Bill Gates</strong></p>
+                    </h3>
+
+                </section>
+
+            </div>
+
+            <div class="col-1-1">
+                <br>
+
+                <a name="Background"></a>
+                <h2>Background</h2>
+
+                <p>
+                    I found myself writing various pieces of code, primarily in
+                    Python, for the
+                    <a href="http://www.k2datascience.com/data-science">
+                        K2 Data Science Bootcamp
+                    </a>
+                    (which I highly recommend), and wanted to make them easy to
+                    share with the community.
+                </p>
+
+                <p>
+                    As long as everything is in the right place creating
+                    Python packages and hosting them on
+                    <a href="https://pypi.python.org/pypi/pip">
+                        PIP
+                    </a>
+                    is a piece of cake.
+                </p>
+
+                <p>
+                    The bash script
+                    <a href="https://github.com/TimothyHelton/pyproject_generator/blob/master/pypackage_generator.sh">
+                        pypackage_generator.sh
+                    </a>
+                    will automate the setup process for creating a Python
+                    package, which uses
+                    <a href="http://www.sphinx-doc.org/en/stable/#">
+                        SPHINX
+                    </a>
+                    for documentation and
+                    <a href="https://git-scm.com/">
+                        Git
+                    </a>
+                    for version control.
+                </p>
+
+                <p>
+                    Thanks for looking around and enjoy the day!
+                </p>
+
+                <a name="Installation"></a>
+                <h2>Installation</h2>
+
+                <p>
+                    All you need is the
+                    <a href="https://github.com/TimothyHelton/pyproject_generator/blob/master/pypackage_generator.sh">
+                        pypackage_generator.sh
+                    </a>.
+                </p>
+
+
+                <ol>
+                    <li>
+                        go to
+                        <strong>
+                            <a href="https://github.com/TimothyHelton/pyproject_generator/blob/master/pypackage_generator.sh">
+                                source file
+                            </a>
+                        </strong>
+                    </li>
+                    <li>
+                        Save as...
+                    </li>
+                    <li>
+                        Change permissions to make the file user executable
+                    </li>
+                </ol>
+
+                <pre class="col-1-2">
+                    <span>chmod u+x pypackage_generator.sh</span>
+                </pre>
+
+                <a name="QuickStart"></a>
+                <h2>Quick Start Guide</h2>
+
+                <h3>Configuration</h3>
+
+                <section class="col-1-2">
+
+                    <ol>
+                        <li>
+                            Edit the pypackage_generator.sh file
+                        </li>
+                        <li>
+                            Enter your name in the author argument
+                            <pre>
+                                <span>AUTHOR="Timothy Helton"</span>
+                            </pre>
+                        </li>
+                        <li>
+                            Enter your email address in the email argument
+                            <pre>
+                                <span>EMAIL="timothy.j.helton@gmail.com"</span>
+                            </pre>
+                        </li>
+                        <li>
+                            Enter the current year
+                            <pre>
+                                <span>YEAR="2017"</span>
+                            </pre>
+                        </li>
+                    </ol>
+
+                </section>
+
+                <h3>Execution</h3>
+
+                <p>
+                    The script has a single required argument, which is the
+                    name of the package.
+                </p>
+
+                <pre class="col-1-2">
+                    <span>./pypackage_generator.sh example_package</span>
+                </pre>
+
+                <h3>What will the script generate?</h3>
+
+                <ul>
+                    <li>Package Main Directory</li>
+                    <li>License File</li>
+                    <li>
+                        The default license is based off the open source
+                        license used by NumPy.
+                    </li>
+                    <li>Manifest File</li>
+                    <li>Readme File</li>
+                    <li>Python Setup File</li>
+                    <li>.gitignore File</li>
+                    <li>Data Directory</li>
+                    <li>Documentation Directory</li>
+                    <li>Source Directory</li>
+                    <li>Source Constructor</li>
+                    <li>Tests Directory</li>
+                    <li>Tests Constructor</li>
+                    <li>.git Directory</li>
+                </ul>
+
+                <pre class="col-1-2">
+                    <span>├── example_package</span>
+                    <span>    ├── LICENSE.txt</span>
+                    <span>    ├── MANIFEST.in</span>
+                    <span>    ├── README.md</span>
+                    <span>    ├── data/</span>
+                    <span>    ├── docs/</span>
+                    <span>    │   ├── _build</span>
+                    <span>    │   ├── _static</span>
+                    <span>    │   └── _templates</span>
+                    <span>    ├── example_package/</span>
+                    <span>    │   ├── __init__.py</span>
+                    <span>    │   └── tests/</span>
+                    <span>    │       └── __init__.py</span>
+                    <span>    ├── notebooks</span>
+                    <span>    ├── setup.py</span>
+                    <span>    ├── .git/</span>
+                    <span>    └── .gitignore</span>
+                </pre>
+
+                <a name="NextSteps"></a>
+                <h2>NextSteps</h2>
+
+                <section class="col-1-2">
+
+                    <ol>
+                        <li>
+                            Activate your preferred Python interpreter
+                        </li>
+                        <li>
+                            Create a new virtual environment
+                        </li>
+                        <li>
+                            Navigate to the new package main directory
+                        </li>
+                        <li>
+                            Install your package in developer mode
+                            <pre>
+                                <span>pip install -e .</span>
+                            </pre>
+                        </li>
+                        <li>
+                            Go to the docs directory and configure SPHINX
+                            <pre>
+                                <span>sphinx-quickstart</span>
+                            </pre>
+                        </li>
+                    </ol>
+
+                </section>
+
+            </div>
+
+        </section>
+
+        <!-- Disqus Comments -->
+
+        <div class="comments" id="disqus_thread"></div>
+        <script>
+
+        var disqus_config = function () {
+            this.page.url =
+                "https://timothyhelton.github.io/pyproject_generator.html";
+            this.page.identifier = "pyproject_generator";
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://timothyhelton-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <script id="dsq-count-scr" src="//timothyhelton-github-io.disqus.com/count.js" async></script>
+
+        <!-- Footer -->
+
+        <footer class="primary-footer container group">
+
+            <small>&copy; Timothy Helton</small>
+
+            <nav class="nav primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li><!--
+                    --><li><a href="about.html">About</a></li><!--
+                    --><li><a href="projects.html">Projects</a></li><!--
+                    --><li><a href="blog.html">Blog</a></li><!--
+                    --><li>
+                        <a href="https://github.com/TimothyHelton">GitHub</a>
+                       </li>
+                </ul>
+            </nav>
+
+        </footer>
+
+    </body>
+
+</html>

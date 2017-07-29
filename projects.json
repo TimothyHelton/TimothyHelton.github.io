@@ -55,6 +55,16 @@
       ]
     },
     {
+      "name": "pyproject_generator",
+      "type": "project",
+      "children": [
+        {
+          "name": "Bash",
+          "type": "python",
+          "url": "pyproject_generator.html"
+        }
+      ]
+    },    {
       "name": "Strumenti",
       "type": "project",
       "children": [
