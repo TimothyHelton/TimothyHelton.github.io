@@ -314,8 +314,7 @@ pre span {
 pre span:before {
     border-right: 1px solid #c8bd92;
     color: #c8bd92;
-    /*GitHub.io does not support the text-align for this feature.*/
-    /*content: counter(line);*/
+    content: counter(line);
     counter-increment: line;
     display: inline-block;
     margin-right: 0.5em;
