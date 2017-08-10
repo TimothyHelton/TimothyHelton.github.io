@@ -579,6 +579,12 @@ Images
     padding-top: 22px;
 }
 
+.nba-stats {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    right: 0px;
+}
 .pandas-best {
     width: 700px;
 }
