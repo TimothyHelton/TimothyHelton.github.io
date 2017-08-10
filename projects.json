@@ -3,6 +3,42 @@
   "type": "root",
   "children": [
     {
+      "name": "NBA Statistics",
+      "type": "project",
+      "children": [
+        {
+          "name": "Beautiful Soup",
+          "type": "web_scraping",
+          "url": "nba_stats.html"
+        },
+        {
+          "name": "Requests",
+          "type": "web_scraping",
+          "url": "nba_stats.html"
+        },
+        {
+          "name": "pandas",
+          "type": "code",
+          "url": "nba_stats.html"
+        },
+        {
+          "name": "scikit learn",
+          "type": "code",
+          "url": "nba_stats.html"
+        },
+        {
+          "name": "Matplotlib",
+          "type": "visualization",
+          "url": "nba_stats.html"
+        },
+        {
+          "name": "Sphinx",
+          "type": "documentation",
+          "url": "nba_stats.html"
+        }
+      ]
+    },
+    {
       "name": "NYC Signature Locations",
       "type": "project",
       "children": [
@@ -77,32 +113,6 @@
           "name": "Sphinx",
           "type": "documentation",
           "url": "strumenti.html"
-        }
-      ]
-    },
-    {
-      "name": "Project",
-      "type": "project",
-      "children": [
-        {
-          "name": "Web Scraping",
-          "type": "web_scraping"
-        },
-        {
-          "name": "Database",
-          "type": "database"
-        },
-        {
-          "name": "Python",
-          "type": "code"
-        },
-        {
-          "name": "Visualization",
-          "type": "visualization"
-        },
-        {
-          "name": "Documentation",
-          "type": "documentation"
         }
       ]
     }
