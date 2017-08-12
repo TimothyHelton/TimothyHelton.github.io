@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="71e93433-6ec8-4df9-800d-5d1a4bcc4398"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"e148a431-abf0-4446-b5b0-e8d18fc2ea2b":{"roots":{"references":[{"attributes":{"lat":39.5,"lng":-98.35,"zoom":4},"id":"b6b522a0-53c8-499c-bdb8-ae47def19ea6","type":"GMapOptions"},{"attributes":{},"id":"0492958f-eb5e-4742-a745-1c3d41c6acc4","type":"ToolEvents"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"1c465a3b-d936-4b1a-9df2-1b33e142b3f4","type":"HoverTool"},{"id":"8de01b6f-048f-4b0b-84df-37f4563aa0ab","type":"PanTool"},{"id":"c834025b-911b-4400-9a19-42479a80e1ca","type":"WheelZoomTool"}]},"id":"d6d258a3-fb5d-4cba-93b1-67db5b8c3703","type":"Toolbar"},{"attributes":{"data_source":{"id":"d050c532-3869-4df5-85bb-68adab9c421c","type":"ColumnDataSource"},"glyph":{"id":"27580351-d71b-40d9-9b1f-6b762a659966","type":"Circle"},"hover_glyph":null,"muted_glyph":null},"id":"04d2b576-8209-4eb1-b261-25731dee3390","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["latitude","longitude","qty","m_size","locations"],"data":{"latitude":{"__ndarray__":"mk8MfzxbREBKYHMOnmNCQANJM3EGmkRALQcf7/r7PkA5OTJFb+tCQO+1+7A54UFAQuSZPApRREB3xeepaTVEQG3XleAedENAaWkTzD23QkAVfOQgMqo7QH/qadFMKEZACsp+J3cHREDi8UgX9vc/QI5Z9iSwlUtAUkMbgA0cMkCSl5BqMyJEQF1Jl6Ns+0JAdbuoJz3CQUDMHewDf0xDQFd/3xozFUBAmGL9VTbNREBL58OzBOtAQHO4+8FlLUBAU0FF1a8QTEBv2SH+YV1HQNap8j0jHUdAuMd3zrsoQEACnN7F+ykiQLMvNDIj4EdAL26jAbyZQUDNzMzMzIxGQA==","dtype":"float64","shape":[32]},"locations":["New York","California","Pennsylvania","Louisiana","Kentucky","North Carolina","Illinois","Ohio","District of Columbia","Virginia","Florida","Michigan","New Jersey","Texas","Lithuania","Jamaica","Indiana","Missouri","Tennessee","West Virginia","Georgia","Connecticut","South Carolina","Mississippi","Canada","Minnesota","France","Alabama","Nigeria","Washington","Arkansas","Croatia"],"longitude":{"__ndarray__":"hkyeV2GAUsAVfIlnv9pdwOkwuhdzTFPAxZfk25b9VsBqdSj5RxFVwKQUzzQ8wVPA88HXfIFZVsDEnKBNDrpUwJCr7BZcQlPAqHv4jQqqU8AL0/caAmFUwMgx/iKNZlXAZdBkWvaZUsCu5kpOt/lYwEvIBz2b4TdAGJP+XgpTU8DFKpQ7oohVwB0uKMI89VbATKNuDCalVcBid8sfHR1UwGmcl9SauVTAblD7rZ1FUsB0Q1N2ekpUwPPB13yBWVbA4Az+fjGWWsBPVUbI5atXwPBrJAnCtQFAwk8cQL+5VcBkey3ovVkhQKwA321eL17AHS4owjz1VsC5ZMFpZmYuQA==","dtype":"float64","shape":[32]},"m_size":[21,15,15,14,11,10,10,10,9,8,8,8,8,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6],"qty":[16,10,10,9,6,5,5,5,4,3,3,3,3,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1]}},"id":"d050c532-3869-4df5-85bb-68adab9c421c","type":"ColumnDataSource"},{"attributes":{"callback":null},"id":"88aa9e3d-5c44-4bdf-b034-d237537002b7","type":"Range1d"},{"attributes":{"plot":{"id":"c328a139-a0a4-4890-8405-e611b4f03617","type":"GMapPlot"}},"id":"c834025b-911b-4400-9a19-42479a80e1ca","type":"WheelZoomTool"},{"attributes":{},"id":"83554eab-59b2-4baf-9bb2-bcff9f843370","type":"LinearScale"},{"attributes":{"plot":null,"text":"Hall of Fame Birth Locations"},"id":"e10cde6c-b885-4700-99a0-b2011626d454","type":"Title"},{"attributes":{},"id":"3c243f4a-2e59-40bf-8528-085ecee6521c","type":"LinearScale"},{"attributes":{"callback":null},"id":"a80dea08-1463-4844-a890-be6973c4edfc","type":"Range1d"},{"attributes":{"callback":null,"plot":{"id":"c328a139-a0a4-4890-8405-e611b4f03617","type":"GMapPlot"},"tooltips":[["Hall of Fame Players","@qty"]]},"id":"1c465a3b-d936-4b1a-9df2-1b33e142b3f4","type":"HoverTool"},{"attributes":{"plot":{"id":"c328a139-a0a4-4890-8405-e611b4f03617","type":"GMapPlot"}},"id":"8de01b6f-048f-4b0b-84df-37f4563aa0ab","type":"PanTool"},{"attributes":{"api_key":"AIzaSyBbHu5HrfPK7i7G3ze_D_VKB9ZB1HBD9nk","map_options":{"id":"b6b522a0-53c8-499c-bdb8-ae47def19ea6","type":"GMapOptions"},"plot_width":800,"renderers":[{"id":"04d2b576-8209-4eb1-b261-25731dee3390","type":"GlyphRenderer"}],"title":{"id":"e10cde6c-b885-4700-99a0-b2011626d454","type":"Title"},"tool_events":{"id":"0492958f-eb5e-4742-a745-1c3d41c6acc4","type":"ToolEvents"},"toolbar":{"id":"d6d258a3-fb5d-4cba-93b1-67db5b8c3703","type":"Toolbar"},"x_range":{"id":"88aa9e3d-5c44-4bdf-b034-d237537002b7","type":"Range1d"},"x_scale":{"id":"3c243f4a-2e59-40bf-8528-085ecee6521c","type":"LinearScale"},"y_range":{"id":"a80dea08-1463-4844-a890-be6973c4edfc","type":"Range1d"},"y_scale":{"id":"83554eab-59b2-4baf-9bb2-bcff9f843370","type":"LinearScale"}},"id":"c328a139-a0a4-4890-8405-e611b4f03617","type":"GMapPlot"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#cc0000"},"line_color":{"value":null},"size":{"field":"m_size","units":"screen"},"x":{"field":"longitude"},"y":{"field":"latitude"}},"id":"27580351-d71b-40d9-9b1f-6b762a659966","type":"Circle"}],"root_ids":["c328a139-a0a4-4890-8405-e611b4f03617"]},"title":"Bokeh Application","version":"0.12.6"}};
+              var render_items = [{"docid":"e148a431-abf0-4446-b5b0-e8d18fc2ea2b","elementid":"71e93433-6ec8-4df9-800d-5d1a4bcc4398","modelid":"c328a139-a0a4-4890-8405-e611b4f03617"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>

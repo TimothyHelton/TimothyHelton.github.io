@@ -544,7 +544,11 @@ Home
 HTML
 =========================
  */
-.nyc-bokeh {
+.nba-bokeh {
+    height: 600px;
+    width: 800px;
+
+}.nyc-bokeh {
     height: 600px;
     width: 425px;
 }
