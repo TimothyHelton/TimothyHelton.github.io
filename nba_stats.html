@@ -73,7 +73,7 @@
                     <ul class="ul-contents">
                         <li><a href="#Background">Background</a></li>
                         <li><a href="#Strategy">Strategy</a></li>
-                        <li><a href="#Analysis">Analysis</a></li>
+                        <li><a href="#EDA">Exploratory Data Analysis</a></li>
                         <li><a href="#Conclusion">Conclusion</a></li>
                         <li><a href="#DataFiles">DataFiles</a></li>
                         <li><a href="#PythonVersion">Python Version</a></li>
@@ -114,7 +114,101 @@
                      height="150px"
                      alt="Hall of Fame Percent">
                 <p>
-                    # TODO Background
+                    Out of all the outstanding players that have been in
+                    the NBA, less than three percent have been inducted into
+                    the Hall of Fame.
+                </p>
+
+                <ul>
+                    <li>
+                        Who should be next to receive this honor?
+                    </li>
+                    <li>
+                        Are there common measurable traits among Hall of
+                        Fame players?
+                    </li>
+                    <li>
+                        Is it possible to identify these top tier stars
+                        while they are still playing.
+                    </li>
+                </ul>
+
+                <br>
+                <p>
+                    This project will apply machine learning techniques in
+                    search of the answers to these questions.
+                    "What's the point?", you ask?
+                    While singling out historic figures that deserve
+                    recognition for their accomplishments would contribute
+                    to the game, finding gifted athletes early in their
+                    careers would lead to <strong>championships</strong>.
+                </p>
+
+                <!-- Strategy -->
+
+                <a name="Strategy"></a>
+                <h2>Strategy</h2>
+
+                <p>
+                    There are a couple of obvious paths to learning what
+                    traits will result in exceptional players at the
+                    professional level.
+                </p>
+
+                <ol>
+                    <li>
+                        Study the game of a basketball for a
+                        <em>lifetime</em> to acquire expert knowledge.
+                    </li>
+                    <li>
+                        Study players that are already in the Hall of Fame
+                        to learn what lead to the greatness they brought to
+                        the court.
+                    </li>
+                </ol>
+
+                <p>
+                    I possessed some talent for the sport of soccer in my
+                    young day, but was completely useless at basketball.
+                    In lieu of dedicating the second half of my life to
+                    the art of round ball let's choose option 2 and see
+                    what there is to find in almost 70 years of player
+                    statistics.
+                </p>
+
+                <p>
+                    If you would like to investigate any of the datasets
+                    used for this project, check out the
+                    <a href="#DataFiles">data files</a> section below.
+                </p>
+
+                <p>
+                    Links to all the <a href="#SourceCode">source code</a>
+                    and the project's Notebook are also available.
+                </p>
+
+                <!-- Exploratory Data Analysis -->
+
+                <a name="EDA"></a>
+                <h2>Exploratory Data Analysis</h2>
+
+                <p>
+                    The Naismith Memorial Basketball
+                    <a href="http://www.hoophall.com/">Hall of Fame</a>
+                    located in Springfield Massachusetts is where the best
+                    of the best are enshrined for history.
+                    There are a number of different ways to get into the
+                    Hall other than being a player as show in the following
+                    graphic.
+                    Of interest is the fact that there are far fewer coaches
+                    at the pro level, but it appears they have a much higher
+                    percentage of being selected to join the Hall of Fame
+                    than players.
+                    One could also argue that getting a coaching appointment
+                    on a professional sports team is more difficult than
+                    getting in a game.
+                    The call on how to perceive that anomaly will be left up
+                    to you.
                 </p>
 
                 <img class="nba-stats"
@@ -137,15 +231,17 @@
                         of the NBA
                     </li>
                     <li>NBA Stars</li>
-                    <li>Players from other countries</li>
+                    <li>Players from leagues outside the United States</li>
                 </ul>
 
                 <br>
                 <p>
+                    The next chart depicts a break down of the different
+                    player categories.
                     For this project we are concentrating on the inductees
                     that played in the NBA.
                     That means the calibration data sample size is reduced
-                    from <strong>167</strong> to <strong>111</strong>.
+                    from <strong>167</strong> to <strong>109</strong>.
                 </p>
 
                 <img class="nba-stats"
@@ -175,15 +271,6 @@
                      src="assets/images/nba_stats/hof_college.png"
                      width="500px"
                      alt="Hall of Fame College">
-
-                <!-- Strategy -->
-
-                <a name="Strategy"></a>
-                <h2>Strategy</h2>
-
-                <p>
-                    # TODO Strategy
-                </p>
 
                 <img class="nba-stats"
                      src="assets/images/nba_stats/hof_correlation.png"
