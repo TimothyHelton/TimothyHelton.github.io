@@ -301,18 +301,51 @@
                 <a name="Analysis"></a>
                 <h2>Analysis</h2>
 
+                <p>
+                    The <a href="#DataFiles">Season Statistics</a> dataset
+                    contains 47 performance statistics for all NBA players
+                    going back to 1950.
+                    We are going to use these values to develop a predictive
+                    model to categorize if the season was Hall of Fame
+                    worthy or not.
+                    As the following correlation matrix displays, most of the
+                    linear relationships between the numerical variables are
+                    positive and some are significant.
+                </p>
+
                 <img class="nba-stats"
                      src="assets/images/nba_stats/hof_correlation.png"
                      width="1000px"
                      alt="Hall of Fame Correlation">
 
                 <p>
-                    # TODO Analysis
-
-                    Distribution of Number of Features plot optimum (method
-                    runs repeated tests)
-                    47 is the optimal
+                    An added complexity of this dataset is values are
+                    logically missing from bulk portions of the records.
+                    For example, the three-point shot was introduced to the
+                    league in 1979.
+                    This results in every player season prior to this data
+                    having a null value for this statistic.
                 </p>
+
+                <p>
+                    A common approach to deal with these missing values
+                    would be to employee an imputer class to fill the holes
+                    with an aggregate function.
+                    Do to the mechanical nature of the null value locations I
+                    chose not to utilize this technique.
+                    In stead the data was partitioned into 21 unique subsets
+                    each void of any null values.
+                    Why 21 you ask?
+                    This was the number of unique complete subsets that
+                    existed in the dataset.
+                    The following table breaks down which features are
+                    included in each subset.
+                </p>
+
+                <img class="nba-stats"
+                     src="assets/images/nba_stats/feature_table.png"
+                     width="800px"
+                     alt="Feature Table">
 
                 <p>
                     # TODO make features table
