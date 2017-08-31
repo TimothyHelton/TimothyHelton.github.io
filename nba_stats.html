@@ -74,6 +74,7 @@
                         <li><a href="#Background">Background</a></li>
                         <li><a href="#Strategy">Strategy</a></li>
                         <li><a href="#EDA">Exploratory Data Analysis</a></li>
+                        <li><a href="#Application">Application</a></li>
                         <li><a href="#Conclusion">Conclusion</a></li>
                         <li><a href="#DataFiles">DataFiles</a></li>
                         <li><a href="#PythonVersion">Python Version</a></li>
@@ -344,65 +345,144 @@
 
                 <img class="nba-stats"
                      src="assets/images/nba_stats/feature_table.png"
-                     width="800px"
+                     width="1000px"
                      alt="Feature Table">
 
                 <p>
-                    # TODO make features table
+                    Each subset will be sent through a pipeline to generate
+                    classification models.
+                    The key components to this automation will be covered in
+                    more detail, but here is the overall process.
+                </p>
 
-                    position
-                    age
-                    team
-                    games
-                    games_started
-                    minutes_played
-                    efficiency_rating
-                    true_shooting_pct
-                    3_point_average_attempts
-                    ftr
-                    offensive_rebound_pct
-                    defensive_rebound_pct
-                    total_rebound_pct
-                    assist_pct
-                    steal_pct
-                    block_pct
-                    turnovers_pct
-                    usage_pct
-                    offensive_win_shares
-                    defensive_win_shares
-                    win_shares
-                    win_shares_48
-                    offensive_box_plus_minus
-                    defensive_box_plus_minus
-                    box_plus_minus
-                    value_over_replacement_player
-                    field_goals
-                    field_goal_attempts
-                    field_goal_pct
-                    3_pointers
-                    3_painters_attempts
-                    2_pointers
-                    2_pointers_attempts
-                    2_pointers_pct
-                    effective_field_goal_pct
-                    free_throws
-                    free_throw_attempts
-                    free_throw_pct
-                    offensive_rebounds
-                    defensive_rebounds
-                    total_rebounds
-                    assists
-                    steals
-                    blocks
-                    turnovers
-                    fouls
-                    points
+                <ol>
+                    <li>
+                        Create a response for each record.
+                        <ul>
+                            <li>
+                                0: Player is <em>not</em> in the Hall of Fame
+                            </li>
+                            <li>1: Hall of Fame member</li>
+                        </ul>
+                    </li>
+                    <li>Split subset into balanced train test sets</li>
+                    <li>Normalize the data.</li>
+                    <li>
+                        Perform a Principal Components Analysis (PCA) of the
+                        training set
+                    </li>
+                    <li>
+                        Evaluate the PCA transformed data utilizing the
+                        following models.
+                        <ul>
+                            <li>Linear Discriminant Analysis</li>
+                            <li>Logistic Regression</li>
+                            <li>Naive Bayes</li>
+                            <li>Quadratic Discriminant Analysis</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Transform the test set using the classification model.
+                    </li>
+                    <li>Score the model.</li>
+                </ol>
+
+                <h5>Create Response</h5>
+
+                <p>
+                    <a href="http://www.nba.com/history/hall-of-fame-inductees/">This</a>
+                    website was scrapped to retrieve all the player Hall of
+                    Fame inductees through 2012.
+                    For the response a one was assigned to the Hall of Famers,
+                    and a zero was given to all the other players.
+                </p>
+
+                <ul>
+                    <li>1: Hall of Fame Player</li>
+                    <li>0: Regular Player</li>
+                </ul>
+
+                <br>
+                <h5>Split Subset into Train Test Sets</h5>
+
+                <p>
+                    The number of Hall of Fame records for each subset
+                    was grossly less than the regular player records, initially
+                    resulting in poor classification models.
+                    To remedy this issue balanced training and test sets
+                    were generated using the following bootstrap technique.
+                </p>
+
+                <ol>
+                    <li>
+                        For each feature the data was standardized about the
+                        mean with a standard deviation equal to the variance.
+                    </li>
+                    <li>
+                        Randomly segregate 20% of the found Hall of Fame
+                        records to be used as a Hall of Fame test set.
+                    </li>
+                    <li>
+                        Randomly sample, with replacement, the remaining 80%
+                        of the Hall of Fame players until a training set
+                        with 500 records is generated.
+                        This means that multiple entries in this dataset
+                        will be the identical.
+                    </li>
+                    <li>
+                        Randomly sample the regular players until a Regular
+                        test set equal in size to the Hall of Fame test set
+                        from step 1 is generated.
+                    </li>
+                    <li>
+                        Randomly sample, with replacement, 500 records from
+                        the regular players not included in the Regular test
+                        set.
+                        Here it is highly improbable that duplicate entries
+                        are included, but it still could happen.
+                    </li>
+                    <li>
+                        Combine and shuffle the Hall of Fame test set with
+                        the Regular player test set.
+                    </li>
+                    <li>
+                        Combine and shuffle the Hall of Fame training set
+                        with the Regular player training set.
+                    </li>
+                </ol>
+
+                <h5>Principal Components Analysis (PCA)</h5>
+
+                <p>
+                    A Principal Components Analysis was performed on the
+                    test set for each subset to identify the components with
+                    maximum variance.
+                    This transformed space is normally used to reduce the
+                    number of features under consideration when generating a
+                    model, but ue to the test set size of 1000 records the
+                    computational time to keep all features was acceptable.
+                </p>
+
+                <p>
+                    A summary plot for one of the subsets is shown below
+                    identifying the variance contribution of the most
+                    influential components and the first two hyperplanes of
+                    the PCA analysis.
+                    The influential components were chosen by including
+                    components where the first segment of the 2<sup>nd</sup>
+                    derivative of the individual variance curve was positive.
                 </p>
 
                 <img class="nba-stats"
                      src="assets/images/nba_stats/pca.png"
                      width="800px"
                      alt="Principal Component Analysis Plot">
+
+                <h5>Classification Models</h5>
+
+                <p>
+                    #TODO
+                </p>
 
                 <img class="nba-stats"
                      src="assets/images/nba_stats/model_evaluation.png"
@@ -419,6 +499,16 @@
                      width="215px"
                      alt="Confusion Matrix">
 
+                <!-- Application -->
+
+                <br>
+                <a name="Application"></a>
+                <h2>Application</h2>
+
+                <p>
+                    # TODO Application
+                </p>
+
                 <!-- Conclusion -->
 
                 <br>
@@ -426,7 +516,22 @@
                 <h2>Conclusion</h2>
 
                 <p>
-                    # TODO Conclusion
+                    This project looked at the NBA player statistics to
+                    generate a predictive model to identify potential Hall
+                    of Fame inductees.
+                    First some characteristics of Hall of Fame players were
+                    presented
+                    Then details of creating a classification model were
+                    discussed.
+                    Finally, the derived model was employed to predict the
+                    next round of players to be inducted into the Hall of
+                    Fame in addition to up and coming stars of the league.
+                </p>
+
+                <p>
+                    Do you agree with the predictions?
+                    Who would you put in the basketball Hall of Fame?
+                    Leave a comment below and start the discussion!
                 </p>
 
                 <!-- Data Files -->
