@@ -1697,8 +1697,9 @@
                     <a href="http://www.nba.com/history/hall-of-fame-inductees/">This</a>
                     website was scrapped to retrieve all the player Hall of
                     Fame inductees through 2012.
-                    For the response a one was assigned to the Hall of Famers,
-                    and a zero was given to all the other players.
+                    For the response a value of one was assigned to the Hall
+                    of Famers, and a value of zero was given to all the other
+                    players.
                 </p>
 
                 <ul>
@@ -1785,7 +1786,27 @@
                 <h5>Classification Models</h5>
 
                 <p>
-                    #TODO
+                    With the subset transformed into the PCA space it was
+                    now time to feed the data into the following
+                    classification algorithms.
+                </p>
+
+                <ul>
+                    <li>Linear Discriminant Analysis</li>
+                    <li>Logistic Regression</li>
+                    <li>Naive Bayes</li>
+                    <li>Quadratic Discriminant Analysis</li>
+                </ul>
+
+                <br>
+                <p>
+                    The next figure summarizes the predictive score for each
+                    model.
+                    If either the training or test score was below an
+                    accuracy of 80% the subset was filtered out.
+                    It's easily observed that the
+                    <strong>Logistic Regression</strong> model is the
+                    preferred choice for this dataset.
                 </p>
 
                 <img class="nba-stats"
@@ -1793,10 +1814,46 @@
                      width="400px"
                      alt="Model Evaluation Plot">
 
+                <p>
+                    The subset utilizing 47 of the statistical features
+                    produced the highest predictive capability, but there is
+                    a element of stochastic variability involved in choosing
+                    the training and test sets.
+                    The machinery that analyzes this dataset has a default
+                    random seed value of zero chosen.
+                    To verify the random seed value was not skewing the
+                    results 100 instances of the Logistic Regression were
+                    run with the seed value allowed to be chosen at random.
+                    For each analysis the subset with the highest accuracy
+                    was logged.
+                    Here are the results of a particular batch.
+                </p>
+
                 <img class="nba-stats"
                      src="assets/images/nba_stats/optimal_features.png"
                      width="400px"
                      alt="Optimal Features Plot">
+
+                <p>
+                    In some cases the batch execution produced more high
+                    scores using the subset with 48 features than the subset
+                    with 47 features.
+                    The only difference between the two subsets was the
+                    feature <em>3-Point Field Goal Percentage</em>.
+                    This information is captured in the combination of
+                    <em>3-Point Field Goals</em> and
+                    <em>3-Point Field Goal Attempts</em>, so I chose to use
+                    the subset of 47 features for future calculations.
+                </p>
+
+                <p>
+                    The confusion Matrix generated from the test set using
+                    the preferred model of Logistic Regression and a subset
+                    of 47 features is below.
+                    These scores seem a little too good, so let's apply this
+                    model to the entire subset with 47 features and see what
+                    we have.
+                </p>
 
                 <img class="nba-stats"
                      src="assets/images/nba_stats/confusion_matrix.png"
