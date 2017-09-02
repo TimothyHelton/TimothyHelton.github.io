@@ -750,24 +750,24 @@ Tables
     border-bottom: 1px solid black;
 }
 
-.schema {
-    padding-left: 15px;
-}
-
 .schema-text {
     font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.nba,
 .schema table {
     padding-bottom: 44px;
     width: 95%;
 }
 
+.nba td:nth-child(even),
 .schema td:nth-child(even) {
     background-color: #f0f2f0;
 }
 
+.nba td h5,
 .schema td h5 {
     background: -webkit-linear-gradient(to right, #314d26, #6b7243);
     background:    -moz-linear-gradient(to right, #314d26, #6b7243);
@@ -780,21 +780,34 @@ Tables
     padding-right: 10px;
 }
 
+.nba td h6,
 .schema td h6 {
     font-weight: 400;
     padding-left: 10px;
 }
 
+.nba th,
 .schema th {
     font-weight: bold;
     padding-right: 10px;
     text-align: left;
 }
 
+.nba th {
+    text-align: center;
+}
+
+.nba td {
+    font-size: 11px;
+    text-align: center;
+}
+
+.nba-top,
 .schema-top {
     padding-top: -44px;
 }
 
+.nba-middle,
 .schema-middle {
     padding-top: 44px;
 }
