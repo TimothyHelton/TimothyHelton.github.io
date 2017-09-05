@@ -1850,9 +1850,6 @@
                     The confusion Matrix generated from the test set using
                     the preferred model of Logistic Regression and a subset
                     of 47 features is below.
-                    These scores seem a little too good, so let's apply this
-                    model to the entire subset with 47 features and see what
-                    we have.
                 </p>
 
                 <img class="nba-stats"
@@ -1867,7 +1864,261 @@
                 <h2>Application</h2>
 
                 <p>
-                    # TODO Application
+                    What can we learn by applying our model to the entire
+                    subset with 47 features?
+                </p>
+
+                <p>
+                    Here is a list of the players classified as being Hall
+                    of Fame Worthy with the number predicted positive
+                    seasons in parenthesis.
+                </p>
+
+                <ul class="ul-2col">
+                    <li>Eddie Johnson (27)</li>
+                    <li>Mike Dunleavy (24)</li>
+                    <li>Chauncey Billups (22)</li>
+                    <li>Gerald Henderson (22)</li>
+                    <li>Vince Carter (22)</li>
+                    <li>Jason Kidd (22)</li>
+                    <li>Tim Hardaway (21)</li>
+                    <li>Andre Miller (21)</li>
+                    <li>Tim Thomas (21)</li>
+                    <li>Mark Jackson (20)</li>
+                    <li>Kobe Bryant (20)</li>
+                    <li>Sam Cassell (20)</li>
+                    <li>Dale Ellis (20)</li>
+                    <li>Ray Allen (20)</li>
+                    <li>Paul Pierce (19)</li>
+                    <li>Steve Blake (19)</li>
+                    <li>Joe Johnson (19)</li>
+                    <li>Allen Iverson (19)</li>
+                    <li>Beno Udrih (19)</li>
+                    <li>Peja Stojakovic (18)</li>
+                </ul>
+
+                <p>
+                    Since our original Hall of Fame list only included
+                    inductees up to 2012, let check if any of our predicted
+                    players actually made it in.
+                    Again the number of predicted positive seasons will be
+                    in parenthesis.
+                </p>
+
+                <ul>
+                    <li>Allen Iverson (19)</li>
+                    <li>Yao Ming (4)</li>
+                </ul>
+
+                <p>
+                    From a total of 18 possible inductees the model
+                    predicted only 2.
+                    This puts us 11% ahead of the default hypotheses that no
+                    one will be good enough to make the Hall of Fame.
+                </p>
+
+                <p>
+                    To make an impact in the league let's take a look at the
+                    players who have been in the league for two years or
+                    less and have been identified as having Hall of Fame
+                    potential.
+                </p>
+
+                <ul class="ul-4col">
+                    <li>A.J. Wynder</li>
+                    <li>Aaron Swinson</li>
+                    <li>Aleksandar Djordjevic</li>
+                    <li>Alex Abrines</li>
+                    <li>Allan Ray</li>
+                    <li>Alvin Heggs</li>
+                    <li>Alvin Sims</li>
+                    <li>Andre Emmett</li>
+                    <li>Andre Owens</li>
+                    <li>Andreas Glyniadakis</li>
+                    <li>Andy Rautins</li>
+                    <li>Anthony Grundy</li>
+                    <li>Arvydas Macijauskas</li>
+                    <li>Askia Jones</li>
+                    <li>Ben Hansbrough</li>
+                    <li>Bobby Cattage</li>
+                    <li>Bracey Wright</li>
+                    <li>Bryce Dejean-Jones</li>
+                    <li>Bryn Forbes</li>
+                    <li>Butch Graves</li>
+                    <li>Caris LeVert</li>
+                    <li>Carl Henry</li>
+                    <li>Carrick Felix</li>
+                    <li>Casper Ware</li>
+                    <li>Charles Thomas</li>
+                    <li>Chris Herren</li>
+                    <li>Chubby Cox</li>
+                    <li>Clint McDaniel</li>
+                    <li>Corey Crowder</li>
+                    <li>Craig Dykema</li>
+                    <li>D'Angelo Russell</li>
+                    <li>D.J. Kennedy</li>
+                    <li>D.J. Stephens</li>
+                    <li>Damir Markota</li>
+                    <li>Dane Suttle</li>
+                    <li>Dante Exum</li>
+                    <li>Darius Washington</li>
+                    <li>Darrun Hilliard</li>
+                    <li>Darryl Johnson</li>
+                    <li>Dave Johnson</li>
+                    <li>David Stockton</li>
+                    <li>Davis Bertans</li>
+                    <li>DeJuan Wheat</li>
+                    <li>Dedric Willoughby</li>
+                    <li>Demetrius Calip</li>
+                    <li>Demetrius Jackson</li>
+                    <li>Dennis Horner</li>
+                    <li>Dennis Nutt</li>
+                    <li>Denzel Valentine</li>
+                    <li>Derek Grimm</li>
+                    <li>Derrick Phelps</li>
+                    <li>Derrick Rowland</li>
+                    <li>Desmon Farmer</li>
+                    <li>Desmond Ferguson</li>
+                    <li>Devin Booker</li>
+                    <li>Dexter Boney</li>
+                    <li>Dijon Thompson</li>
+                    <li>Dionte Christmas</li>
+                    <li>Donald Whiteside</li>
+                    <li>Drew Gordon</li>
+                    <li>Dwight Anderson</li>
+                    <li>Ed Gray</li>
+                    <li>Evric Gray</li>
+                    <li>Fennis Dembo</li>
+                    <li>Forrest McKenzie</li>
+                    <li>Fred Vinson</li>
+                    <li>Gary Forbes</li>
+                    <li>Geno Carlisle</li>
+                    <li>Gerald Brown</li>
+                    <li>God Shammgod</li>
+                    <li>Guillermo Diaz</li>
+                    <li>Gundars Vetra</li>
+                    <li>Henry Ellenson</li>
+                    <li>Howard Carter</li>
+                    <li>Howard Nathan</li>
+                    <li>Ian Lockhart</li>
+                    <li>Igor Rakocevic</li>
+                    <li>Isaac Fontaine</li>
+                    <li>Ivan McFarlin</li>
+                    <li>Jabari Brown</li>
+                    <li>Jake Layman</li>
+                    <li>Jamal Murray</li>
+                    <li>James Collins</li>
+                    <li>James Cotton</li>
+                    <li>Jamie Waller</li>
+                    <li>Jarell Eddie</li>
+                    <li>Jay Edwards</li>
+                    <li>Jeffrey Sheppard</li>
+                    <li>Joe Crawford</li>
+                    <li>John Douglas</li>
+                    <li>John Greig</li>
+                    <li>John McCullough</li>
+                    <li>John Pinone</li>
+                    <li>Jonathan Gibson</li>
+                    <li>Josh Selby</li>
+                    <li>Juan Carlos</li>
+                    <li>Juan Hernangomez</li>
+                    <li>Karl-Anthony Towns</li>
+                    <li>Keith Appling</li>
+                    <li>Keith Smart</li>
+                    <li>Kelly Oubre</li>
+                    <li>Kim English</li>
+                    <li>Korleone Young</li>
+                    <li>Kyle Wiltjer</li>
+                    <li>Lamar Patterson</li>
+                    <li>Lance Allred</li>
+                    <li>Leonard Taylor</li>
+                    <li>Lionel Chalmers</li>
+                    <li>Logan Vander</li>
+                    <li>Lorenzo Charles</li>
+                    <li>Luis Montero</li>
+                    <li>Lynn Greer</li>
+                    <li>Malachi Richardson</li>
+                    <li>Malcolm Brogdon</li>
+                    <li>Malik Beasley</li>
+                    <li>Marcus Brown</li>
+                    <li>Marcus Georges-Hunt</li>
+                    <li>Marcus Vinicius</li>
+                    <li>Marcus Webb</li>
+                    <li>Marlon Garnett</li>
+                    <li>Matt Othick</li>
+                    <li>Matt Walsh</li>
+                    <li>Matt Wenstrom</li>
+                    <li>Melvin Sanders</li>
+                    <li>Mike Iuzzolino</li>
+                    <li>Mike Morrison</li>
+                    <li>Milt Wagner</li>
+                    <li>Mindaugas Kuzminskas</li>
+                    <li>Myron Jackson</li>
+                    <li>Nate Blackwell</li>
+                    <li>Nemanja Bjelica</li>
+                    <li>Nemanja Nedovic</li>
+                    <li>Nick Johnson</li>
+                    <li>Nicolas Laprovittola</li>
+                    <li>Nikita Wilson</li>
+                    <li>Nikola Jokic</li>
+                    <li>Norman Powell</li>
+                    <li>Oliver Robinson</li>
+                    <li>Orlando Graham</li>
+                    <li>Oscar Torres</li>
+                    <li>Pape Sy</li>
+                    <li>Pat Connaughton</li>
+                    <li>Patrick McCaw</li>
+                    <li>Pero Antic</li>
+                    <li>Peter John</li>
+                    <li>Peyton Siva</li>
+                    <li>Pierre Jackson</li>
+                    <li>Ratko Varda</li>
+                    <li>Raul Lopez</li>
+                    <li>Ray Blume</li>
+                    <li>Richard Petruska</li>
+                    <li>Richard Rellford</li>
+                    <li>Ricky Berry</li>
+                    <li>Ricky Grace</li>
+                    <li>Robert Hite</li>
+                    <li>Rock Lee</li>
+                    <li>Rodney McGruder</li>
+                    <li>Roger Powell</li>
+                    <li>Ryan Lorthridge</li>
+                    <li>Ryan Robertson</li>
+                    <li>Scott Machado</li>
+                    <li>Sergei Bazarevich</li>
+                    <li>Shane Heal</li>
+                    <li>Shea Seals</li>
+                    <li>Sheldon McClellan</li>
+                    <li>Sherell Ford</li>
+                    <li>Sherron Collins</li>
+                    <li>Skeeter Henry</li>
+                    <li>Steven Smith</li>
+                    <li>Stevin Smith</li>
+                    <li>Thomas Gardner</li>
+                    <li>Tim Quarterman</li>
+                    <li>Timothe Luwawu-Cabarrot</li>
+                    <li>Tom Sluby</li>
+                    <li>Treveon Graham</li>
+                    <li>Trevor Ruffin</li>
+                    <li>Troy Bell</li>
+                    <li>Uros Slokar</li>
+                    <li>Vander Blue</li>
+                    <li>Vassilis Spanoulis</li>
+                    <li>Vincenzo Esposito</li>
+                    <li>Wayne Turner</li>
+                    <li>Willie Warren</li>
+                    <li>Xavier Silas</li>
+                    <li>Yuta Tabuse</li>
+                </ul>
+
+                <br>
+                <p>
+                    From a potential list of 1381 young players the model
+                    has singled out 185 or 13% as potential greats.
+                    Signing these players to a medium term contracts would
+                    allow teams to be poised for multiple championship runs
+                    in the future.
                 </p>
 
                 <!-- Conclusion -->
@@ -1881,12 +2132,13 @@
                     generate a predictive model to identify potential Hall
                     of Fame inductees.
                     First some characteristics of Hall of Fame players were
-                    presented
+                    presented.
                     Then details of creating a classification model were
                     discussed.
                     Finally, the derived model was employed to predict the
                     next round of players to be inducted into the Hall of
-                    Fame in addition to up and coming stars of the league.
+                    Fame in addition to identifying up and coming stars of the
+                    league.
                 </p>
 
                 <p>

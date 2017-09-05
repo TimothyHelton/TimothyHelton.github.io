@@ -649,6 +649,25 @@ ul {
     padding: 3px 0px 3px 30px;
 }
 
+.ul-2col {
+    columns: 2;
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    width: 500px;
+}
+
+.ul-4col {
+    columns: 4;
+    -moz-columns: 4;
+    -webkit-columns: 4;
+    width: 1000px;
+}
+.ul-2col,
+.ul-4col {
+    list-style-position: inside;
+    list-style-type: disc;
+}
+
 .ul-middle {
     font-size: 16px;
     padding: 3px 0px 30px 30px;
