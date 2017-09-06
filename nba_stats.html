@@ -130,7 +130,7 @@
                     </li>
                     <li>
                         Is it possible to identify these top tier stars
-                        while they are still playing.
+                        while they are still playing?
                     </li>
                 </ul>
 
@@ -138,11 +138,18 @@
                 <p>
                     This project will apply machine learning techniques in
                     search of the answers to these questions.
-                    "What's the point?", you ask?
-                    While singling out historic figures that deserve
+                </p>
+
+                <p>
+                    You're probably thinking, "What's the point?"
+                </p>
+
+                <p>
+                    While singling out historical figures that deserve
                     recognition for their accomplishments would contribute
-                    to the game, finding gifted athletes early in their
-                    careers would lead to <strong>championships</strong>.
+                    to the game, signing gifted athletes early in their
+                    careers to your team would lead to
+                    <strong>championships</strong>.
                 </p>
 
                 <!-- Strategy -->
@@ -163,16 +170,15 @@
                     </li>
                     <li>
                         Study players that are already in the Hall of Fame
-                        to learn what lead to the greatness they brought to
-                        the court.
+                        to learn what they brought to the court.
                     </li>
                 </ol>
 
                 <p>
-                    I possessed some talent for the sport of soccer in my
-                    young day, but was completely useless at basketball.
+                    I possessed some talent in soccer during my youth, but
+                    was a complete liability on the basketball court.
                     In lieu of dedicating the second half of my life to
-                    the art of round ball let's choose option 2 and see
+                    the art of round ball, let's choose option 2 and see
                     what there is to find in almost 70 years of player
                     statistics.
                 </p>
@@ -199,12 +205,16 @@
                     located in Springfield Massachusetts is where the best
                     of the best are enshrined for history.
                     There are a number of different ways to get into the
-                    Hall other than being a player as show in the following
-                    graphic.
+                    Hall other than being a player, as shown in the graphic
+                    below.
+                </p>
+
+                <p>
                     Of interest is the fact that there are far fewer coaches
                     at the pro level, but it appears they have a much higher
-                    percentage of being selected to join the Hall of Fame
-                    than players.
+                    percentage of being selected to join the Hall of Fame.
+                    So if your end goal is to be inducted into the Hall of
+                    Fame, coaching might be a better option than playing.
                     One could also argue that getting a coaching appointment
                     on a professional sports team is more difficult than
                     getting in a game.
@@ -238,8 +248,8 @@
                 <br>
                 <p>
                     The next chart depicts a break down of the different
-                    player categories.
-                    For this project we are concentrating on the inductees
+                    player categories as of 2012.
+                    For this project, we are concentrating on the inductees
                     that played in the NBA.
                     That means the calibration data sample size is reduced
                     from <strong>167</strong> to <strong>109</strong>.
@@ -251,15 +261,17 @@
                      alt="Hall of Fame Player Subcategories">
 
                 <p>
+                    It's also interesting to note that NBA Hall of Famers
+                    come from very few places on the planet.
                     New York State has produced more Hall of Famers than any
-                    other location on Earth.
+                    other location.
                     Countries outside the United States with inductees include
-                    Jamaica, Lithuania, Canada, Croatia, France and Nigeria.
+                    Jamaica, Lithuania, Canada, Croatia, France, and Nigeria.
                 </p>
 
                 <p>
-                    The next graphic lists where Hall of Fame players
-                    are from in order of player quantity.
+                    The next graphic lists the birth place of all the Hall of
+                    Fame players ranked by quantity in descending order.
                 </p>
 
                 <img class="nba-stats"
@@ -268,8 +280,8 @@
                      alt="Hall of Fame Birth Locations">
 
                 <p>
-                    Each circle glyph is proportional in size to the number
-                    of Hall of Fame players from that location.
+                    On the map each circle glyph is proportional in size to
+                    the number of Hall of Fame players from that location.
                 </p>
 
                 <p>
@@ -297,6 +309,12 @@
                      width="500px"
                      alt="Hall of Fame College">
 
+                <p>
+                    Now that we have some background information laid, let's
+                    dive in and see what knowledge is hidden away in the
+                    player statistics.
+                </p>
+
                 <!-- Analysis -->
 
                 <a name="Analysis"></a>
@@ -307,7 +325,7 @@
                     contains 47 performance statistics for all NBA players
                     going back to 1950.
                     We are going to use these values to develop a predictive
-                    model to categorize if the season was Hall of Fame
+                    model to categorize if each season was Hall of Fame
                     worthy or not.
                     As the following correlation matrix displays, most of the
                     linear relationships between the numerical variables are
@@ -324,17 +342,17 @@
                     logically missing from bulk portions of the records.
                     For example, the three-point shot was introduced to the
                     league in 1979.
-                    This results in every player season prior to this data
+                    This results in every player's season prior to this date
                     having a null value for this statistic.
                 </p>
 
                 <p>
                     A common approach to deal with these missing values
-                    would be to employee an imputer class to fill the holes
+                    would be to employ an imputer class to fill the holes
                     with an aggregate function.
-                    Do to the mechanical nature of the null value locations I
+                    Due to the mechanical nature of the null value locations, I
                     chose not to utilize this technique.
-                    In stead the data was partitioned into 21 unique subsets
+                    Instead, the data was partitioned into 21 unique subsets
                     each void of any null values.
                     Why 21 you ask?
                     This was the number of unique complete subsets that
@@ -1669,15 +1687,18 @@
                             <li>1: Hall of Fame member</li>
                         </ul>
                     </li>
-                    <li>Split subset into balanced train test sets</li>
-                    <li>Normalize the data.</li>
+                    <li>
+                        Split subset into balanced training and testing
+                        sets
+                    </li>
+                    <li>Normalize the data</li>
                     <li>
                         Perform a Principal Components Analysis (PCA) of the
                         training set
                     </li>
                     <li>
                         Evaluate the PCA transformed data utilizing the
-                        following models.
+                        following models:
                         <ul>
                             <li>Linear Discriminant Analysis</li>
                             <li>Logistic Regression</li>
@@ -1686,9 +1707,9 @@
                         </ul>
                     </li>
                     <li>
-                        Transform the test set using the classification model.
+                        Transform the test set using the classification model
                     </li>
-                    <li>Score the model.</li>
+                    <li>Score the model</li>
                 </ol>
 
                 <h5>Create Response</h5>
@@ -1697,7 +1718,7 @@
                     <a href="http://www.nba.com/history/hall-of-fame-inductees/">This</a>
                     website was scrapped to retrieve all the player Hall of
                     Fame inductees through 2012.
-                    For the response a value of one was assigned to the Hall
+                    For the response, a value of one was assigned to the Hall
                     of Famers, and a value of zero was given to all the other
                     players.
                 </p>
@@ -1720,7 +1741,7 @@
 
                 <ol>
                     <li>
-                        For each feature the data was standardized about the
+                        For each feature, the data was standardized about the
                         mean with a standard deviation equal to the variance.
                     </li>
                     <li>
@@ -1732,7 +1753,7 @@
                         of the Hall of Fame players until a training set
                         with 500 records is generated.
                         This means that multiple entries in this dataset
-                        will be the identical.
+                        will be identical.
                     </li>
                     <li>
                         Randomly sample the regular players until a Regular
@@ -1764,7 +1785,7 @@
                     maximum variance.
                     This transformed space is normally used to reduce the
                     number of features under consideration when generating a
-                    model, but ue to the test set size of 1000 records the
+                    model, but due to the test set size of 1000 records, the
                     computational time to keep all features was acceptable.
                 </p>
 
@@ -1786,7 +1807,7 @@
                 <h5>Classification Models</h5>
 
                 <p>
-                    With the subset transformed into the PCA space it was
+                    With the subset transformed into the PCA space, it was
                     now time to feed the data into the following
                     classification algorithms.
                 </p>
@@ -1804,6 +1825,9 @@
                     model.
                     If either the training or test score was below an
                     accuracy of 80% the subset was filtered out.
+                </p>
+
+                <p>
                     It's easily observed that the
                     <strong>Logistic Regression</strong> model is the
                     preferred choice for this dataset.
@@ -1817,15 +1841,22 @@
                 <p>
                     The subset utilizing 47 of the statistical features
                     produced the highest predictive capability, but there is
-                    a element of stochastic variability involved in choosing
+                    an element of stochastic variability involved in choosing
                     the training and test sets.
                     The machinery that analyzes this dataset has a default
-                    random seed value of zero chosen.
+                    random seed value of zero chosen, which makes the results
+                    repeatable.
+                </p>
+
+                <p>
                     To verify the random seed value was not skewing the
                     results 100 instances of the Logistic Regression were
                     run with the seed value allowed to be chosen at random.
-                    For each analysis the subset with the highest accuracy
+                    For each analysis, the subset with the highest accuracy
                     was logged.
+                </p>
+
+                <p>
                     Here are the results of a particular batch.
                 </p>
 
@@ -1835,9 +1866,9 @@
                      alt="Optimal Features Plot">
 
                 <p>
-                    In some cases the batch execution produced more high
+                    In some cases, the batch execution produced more high
                     scores using the subset with 48 features than the subset
-                    with 47 features.
+                    of 47 features.
                     The only difference between the two subsets was the
                     feature <em>3-Point Field Goal Percentage</em>.
                     This information is captured in the combination of
@@ -1857,6 +1888,11 @@
                      width="215px"
                      alt="Confusion Matrix">
 
+                <p>
+                    Now let's see what can be learned by applying our model to
+                    the entire subset of 47 features.
+                </p>
+
                 <!-- Application -->
 
                 <br>
@@ -1864,14 +1900,9 @@
                 <h2>Application</h2>
 
                 <p>
-                    What can we learn by applying our model to the entire
-                    subset with 47 features?
-                </p>
-
-                <p>
                     Here is a list of the players classified as being Hall
                     of Fame Worthy with the number predicted positive
-                    seasons in parenthesis.
+                    seasons in parentheses.
                 </p>
 
                 <ul class="ul-2col">
@@ -1897,12 +1928,13 @@
                     <li>Peja Stojakovic (18)</li>
                 </ul>
 
+                <br>
                 <p>
                     Since our original Hall of Fame list only included
                     inductees up to 2012, let check if any of our predicted
                     players actually made it in.
                     Again the number of predicted positive seasons will be
-                    in parenthesis.
+                    in parentheses.
                 </p>
 
                 <ul>
@@ -1910,18 +1942,18 @@
                     <li>Yao Ming (4)</li>
                 </ul>
 
+                <br>
                 <p>
-                    From a total of 18 possible inductees the model
+                    From a total of 18 possible inductees, the model
                     predicted only 2.
                     This puts us 11% ahead of the default hypotheses that no
                     one will be good enough to make the Hall of Fame.
                 </p>
 
                 <p>
-                    To make an impact in the league let's take a look at the
-                    players who have been in the league for two years or
-                    less and have been identified as having Hall of Fame
-                    potential.
+                    To make an impact in the league, let's take a look at the
+                    players who have been pros for two years or less and
+                    have been identified as having Hall of Fame potential.
                 </p>
 
                 <ul class="ul-4col">
@@ -2114,10 +2146,16 @@
 
                 <br>
                 <p>
-                    From a potential list of 1381 young players the model
+                    From a potential list of 1381 young players, the model
                     has singled out 185 or 13% as potential greats.
-                    Signing these players to a medium term contracts would
-                    allow teams to be poised for multiple championship runs
+                    Identifying this subset would have a direct impact on the
+                    scouting and coaching staff with respect to piecing
+                    together a team designed for success.
+                </p>
+
+                <p>
+                    Signing these players to medium term contracts would
+                    allow a team to be poised for multiple championship runs
                     in the future.
                 </p>
 
@@ -2129,15 +2167,15 @@
 
                 <p>
                     This project looked at the NBA player statistics to
-                    generate a predictive model to identify potential Hall
+                    generate a predictive model identifying potential Hall
                     of Fame inductees.
-                    First some characteristics of Hall of Fame players were
+                    First, some characteristics of Hall of Fame players were
                     presented.
-                    Then details of creating a classification model were
+                    Then the details of creating a classification model were
                     discussed.
                     Finally, the derived model was employed to predict the
                     next round of players to be inducted into the Hall of
-                    Fame in addition to identifying up and coming stars of the
+                    Fame in addition to singling out up and coming stars of the
                     league.
                 </p>
 
