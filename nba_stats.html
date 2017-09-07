@@ -165,8 +165,8 @@
 
                 <ol>
                     <li>
-                        Study the game of a basketball for a
-                        <em>lifetime</em> to acquire expert knowledge.
+                        Study the game of basketball for a <em>lifetime</em>
+                        to acquire expert knowledge.
                     </li>
                     <li>
                         Study players that are already in the Hall of Fame
@@ -280,7 +280,7 @@
                      alt="Hall of Fame Birth Locations">
 
                 <p>
-                    On the map each circle glyph is proportional in size to
+                    On the map, each circle glyph is proportional in size to
                     the number of Hall of Fame players from that location.
                 </p>
 
@@ -310,7 +310,7 @@
                      alt="Hall of Fame College">
 
                 <p>
-                    Now that we have some background information laid, let's
+                    Now that we have some background information, let's
                     dive in and see what knowledge is hidden away in the
                     player statistics.
                 </p>
@@ -352,7 +352,7 @@
                     with an aggregate function.
                     Due to the mechanical nature of the null value locations, I
                     chose not to utilize this technique.
-                    Instead, the data was partitioned into 21 unique subsets
+                    Instead, the data was partitioned into 21 unique subsets,
                     each void of any null values.
                     Why 21 you ask?
                     This was the number of unique complete subsets that
@@ -1716,7 +1716,7 @@
 
                 <p>
                     <a href="http://www.nba.com/history/hall-of-fame-inductees/">This</a>
-                    website was scrapped to retrieve all the player Hall of
+                    website was scraped to retrieve all the player Hall of
                     Fame inductees through 2012.
                     For the response, a value of one was assigned to the Hall
                     of Famers, and a value of zero was given to all the other
@@ -1735,7 +1735,7 @@
                     The number of Hall of Fame records for each subset
                     was grossly less than the regular player records, initially
                     resulting in poor classification models.
-                    To remedy this issue balanced training and test sets
+                    To remedy this issue, balanced training and test sets
                     were generated using the following bootstrap technique.
                 </p>
 
@@ -1824,7 +1824,7 @@
                     The next figure summarizes the predictive score for each
                     model.
                     If either the training or test score was below an
-                    accuracy of 80% the subset was filtered out.
+                    accuracy of 80%, the subset was filtered out.
                 </p>
 
                 <p>
@@ -1850,7 +1850,7 @@
 
                 <p>
                     To verify the random seed value was not skewing the
-                    results 100 instances of the Logistic Regression were
+                    results, 100 instances of the Logistic Regression were
                     run with the seed value allowed to be chosen at random.
                     For each analysis, the subset with the highest accuracy
                     was logged.
@@ -1931,9 +1931,9 @@
                 <br>
                 <p>
                     Since our original Hall of Fame list only included
-                    inductees up to 2012, let check if any of our predicted
+                    inductees up to 2012, let's check if any of our predicted
                     players actually made it in.
-                    Again the number of predicted positive seasons will be
+                    Again, the number of predicted positive seasons will be
                     in parentheses.
                 </p>
 
