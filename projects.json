@@ -3,6 +3,27 @@
   "type": "root",
   "children": [
     {
+      "name": "C++ Project Template",
+      "type": "project",
+      "children": [
+        {
+          "name": "CMake",
+          "type": "code",
+          "url": "cpp_project_template.html"
+        },
+        {
+          "name": "Doxygen",
+          "type": "documentation",
+          "url": "cpp_project_template.html"
+        },
+        {
+          "name": "Google Test",
+          "type": "code",
+          "url": "cpp_project_template.html"
+        }
+      ]
+    },
+    {
       "name": "NBA Statistics",
       "type": "project",
       "children": [
@@ -91,7 +112,7 @@
       ]
     },
     {
-      "name": "pyproject_generator",
+      "name": "Python Project Generator",
       "type": "project",
       "children": [
         {
@@ -100,7 +121,8 @@
           "url": "pyproject_generator.html"
         }
       ]
-    },    {
+    },
+    {
       "name": "Strumenti",
       "type": "project",
       "children": [
